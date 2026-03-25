@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "PP Editorial New";
+    src: url("fonts/PPEditorialNew-Ultralight.otf") format("opentype");
+}
+
+:root {
+    font-size: 100%;
+
+    --font-family: "PP Editorial New";
+
+    --light: #FFFFFF;
+    --dark: #121212;
+
+    --lineheight: 100%;
+    
+    --textL: 4rem;
+    --textM: 2rem;
+    --textS: 1rem;
+
+    --spaceL: 3rem;
+    --spaceM: 2rem;
+    --spaceS: 1rem;
+}
+
+body {
+    font-family: var(--font-family);
+    padding: var(--spaceL);
+    text-transform: uppercase;
+    block-size: 100vh;
+}
+
+h1 {
+    font-size: var(--textL);
+}
+
+h2 {
+    font-size: var(--textM);
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    padding-block-start: var(--spaceL);
+}
+
+.dials {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spaceM);
+    flex: 1;
+}
+
+.canvas {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.canvas img {
+    width: 90%;
+}
+
+ul li {
+    padding-block-start: var(--spaceM);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: underline;
+}
