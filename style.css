@@ -90,6 +90,10 @@ a {
     font-size: var(--textL);
 }
 
+#secondtext {
+    font-size: var(--textM);
+}
+
 .style-1 {
     font-family: var(--font-family);
     color: var(--color);
