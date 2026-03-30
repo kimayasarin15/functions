@@ -50,16 +50,6 @@ h2 {
     flex: 1;
 }
 
-.canvas {
-    flex: 2;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.canvas img {
-    width: 90%;
-}
-
 ul li {
     padding-block-start: var(--spaceM);
 }
@@ -72,4 +62,12 @@ ul li {
 
 a {
     text-decoration: underline;
+}
+
+canvas {
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: var(--dark);
+    width: 100%;
+    height: auto;
 }

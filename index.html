@@ -13,58 +13,29 @@
             <h2>See your work in the world</h2>
         </header>
         <main class="grid">
-        <section class="dials">
-            <ul>
-                <li>
-                    <p>Text</p>
-                    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/text
-                     I used MDN to check how to add a textbox -->
-                    <input type="text">
-                </li>
-                <li>
-                    <p>Color</p>
-                    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color -->
-                    <input type="color">
-                </li>
-                <li>
-                    <p>Style</p>
-                    <ul class="buttons">
-                        <li>
-                            <p>S1</p>
-                        </li>
-                         <li>
-                            <p>S2</p>
-                        </li>
-                         <li>
-                            <p>S3</p>
-                        </li>
-                         <li>
-                            <p>S4</p>
-                        </li>
-                         <li>
-                            <p>S5</p>
-                        </li>
-                    </ul>
-                </li>
-                 <li>
-                    <p>Position</p>
-                    <ul class="buttons">
-                        <li>
-                            <p>P1</p>
-                        </li>
-                         <li>
-                            <p>P2</p>
-                        </li>
-                         <li>
-                            <p>P3</p>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <!-- Need to separate my PSD files but I have put this in as an image to test layout etc -->
-        <section class="canvas">
-            <img src="Background 2.png">
+        <form id="main-form">
+            <section>
+                <label for="text">Add your text:</label>
+                <input id="text" name="text" placeholder="Type here" required type="text">
+            </section>
+            <section>
+                <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color looked up how to add a color input-->
+                <label for="color">Choose your color</label>
+                <input type="color" id="color" name="color" value="#121212"/>
+            </section>
+            <!-- <section>
+				<label for="styles">Choose your style:</label>
+				<select id="styles" name="styles">
+						<option>Style 1</option>
+						<option>Style 2</option>
+						<option>Style 3</option>
+                        <option>Style 4</option>
+                        <option>Style 5</option>
+				</select>
+            </section> -->
+        </form>
+        <section>
+            <canvas id="canvas" width="3000" height="2000"></canvas>
         </section>
         </main>
         <footer>
