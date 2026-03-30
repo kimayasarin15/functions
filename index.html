@@ -15,15 +15,24 @@
         <main class="grid">
         <form id="main-form">
             <section>
-                <label for="text">Add your text:</label>
+                <label for="text">Add your primary text:</label>
+                <input id="text" name="text" placeholder="Type here" required type="text">
+            </section>
+                <section>
+                <label for="text">Add your secondary text:</label>
                 <input id="text" name="text" placeholder="Type here" required type="text">
             </section>
             <section>
                 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color looked up how to add a color input-->
-                <label for="color">Choose your color</label>
+                <label for="color">Choose your background color</label>
+                <input type="color" id="color" name="color" value="#121212"/>
+            </section>
+             <section>
+                <label for="color">Choose your text color</label>
                 <input type="color" id="color" name="color" value="#121212"/>
             </section>
             <!-- <section>
+                Come back to this when styling later
 				<label for="styles">Choose your style:</label>
 				<select id="styles" name="styles">
 						<option>Style 1</option>
