@@ -13,14 +13,15 @@
             <h2>See your work in the world</h2>
         </header>
         <main class="grid">
-        <form id="main-form">
+        <section id="main-form">
+        <form>
             <section>
                 <label for="text">Add your primary text:</label>
-                <input id="text" name="text" placeholder="Type here" required type="text">
+                <input id="primary-text" name="text" placeholder="Type here" required type="text">
             </section>
                 <section>
                 <label for="text">Add your secondary text:</label>
-                <input id="text" name="text" placeholder="Type here" required type="text">
+                <input id="secondary-text" name="text" placeholder="Type here" required type="text">
             </section>
             <section>
                 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color looked up how to add a color input-->
@@ -32,20 +33,29 @@
                 <input type="color" id="color" name="color" value="#121212"/>
             </section>
             <!-- <section>
-                Come back to this when styling later
+                come back to this
 				<label for="styles">Choose your style:</label>
 				<select id="styles" name="styles">
 						<option>Style 1</option>
 						<option>Style 2</option>
 						<option>Style 3</option>
-                        <option>Style 4</option>
-                        <option>Style 5</option>
-				</select>
+                </select>        
             </section> -->
         </form>
         <section>
-            <canvas id="canvas" width="3000" height="2000"></canvas>
+            <label>Choose your style:</label>
+            <button id="style-1">Style 1</button>
+            <button id="style-2">Style 2</button>
+            <button id="style-3">Style 3</button>
         </section>
+        </section>
+        <section>
+                <h2 id="maintext">primary text</h2>
+                <p id="secondtext">secondary text</p>
+        </section>
+        <!-- <section>
+            <canvas id="canvas" width="3000" height="2000"></canvas>
+        </section> -->
         </main>
         <footer>
             <p>Made by <a href="https://www.kimayasarin.com/">Kimaya Sarin</a></p>

@@ -3,13 +3,28 @@
     src: url("fonts/PPEditorialNew-Ultralight.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "ABC Diatype Mono Condensed";
+    src: url("fonts/ABCDiatypeMonoCondensed-Thin-Trial.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "ABC Favorit Edu";
+    src: url("fonts/ABCFavoritEdu-Bold.woff") format("woff");
+}
+
 :root {
     font-size: 100%;
 
     --font-family: "PP Editorial New";
+    --font-family2: "ABC Diatype Mono Condensed";
+    --font-family3: "ABC Favorit Edu";
 
     --light: #FFFFFF;
     --dark: #121212;
+    --color: #FF4848;
+    --color2:#442FFF;
+    --color3: #726D31;
 
     --lineheight: 100%;
     
@@ -37,12 +52,6 @@ h2 {
     font-size: var(--textM);
 }
 
-.grid {
-    display: flex;
-    flex-direction: row;
-    padding-block-start: var(--spaceL);
-}
-
 .dials {
     display: flex;
     flex-direction: column;
@@ -64,10 +73,40 @@ a {
     text-decoration: underline;
 }
 
-canvas {
+/* canvas {
     border-width: 0.5px;
     border-style: solid;
     border-color: var(--dark);
     width: 100%;
     height: auto;
+} */
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#maintext {
+    font-size: var(--textL);
+}
+
+.style-1 {
+    font-family: var(--font-family);
+    color: var(--color);
+}
+
+.style-2{
+    font-family: var(--font-family2);
+    color: var(--color2);
+}
+
+.style-3{
+    font-family: var(--font-family3);
+    color: var(--color3);
+}
+
+button {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: calc(var(--spaceS)*0.2);
 }
