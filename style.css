@@ -13,10 +13,16 @@
     src: url("fonts/ABCFavoritEdu-Bold.woff") format("woff");
 }
 
+@font-face {
+    font-family: "Ayer-Regular-Trial";
+    src: url("fonts/Ayer-Regular-Trial.otf") format("opentype");
+}
+
 :root {
     font-size: 100%;
 
     --font-family: "PP Editorial New";
+    --font-family1: "Ayer-Regular-Trial";
     --font-family2: "ABC Diatype Mono Condensed";
     --font-family3: "ABC Favorit Edu";
 
@@ -52,7 +58,7 @@ h2 {
     font-size: var(--textM);
 }
 
-.dials {
+form {
     display: flex;
     flex-direction: column;
     gap: var(--spaceM);
@@ -73,19 +79,13 @@ a {
     text-decoration: underline;
 }
 
-/* canvas {
-    border-width: 0.5px;
-    border-style: solid;
-    border-color: var(--dark);
-    width: 100%;
-    height: auto;
-} */
-
 .grid {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+
 #maintext {
     font-size: var(--textL);
 }
@@ -95,18 +95,15 @@ a {
 }
 
 .style-1 {
-    font-family: var(--font-family);
-    color: var(--color);
+    font-family: var(--font-family1);
 }
 
 .style-2{
     font-family: var(--font-family2);
-    color: var(--color2);
 }
 
 .style-3{
     font-family: var(--font-family3);
-    color: var(--color3);
 }
 
 button {
@@ -114,3 +111,4 @@ button {
     color: var(--light);
     padding: calc(var(--spaceS)*0.2);
 }
+
