@@ -85,15 +85,6 @@ a {
     justify-content: space-between;
 }
 
-
-#maintext {
-    font-size: var(--textL);
-}
-
-#secondtext {
-    font-size: var(--textM);
-}
-
 .style-1 {
     font-family: var(--font-family1);
 }
@@ -112,3 +103,24 @@ button {
     padding: calc(var(--spaceS)*0.2);
 }
 
+
+img {
+    position: relative;
+    z-index: -1;
+}
+
+#maintext {
+    font-size: calc(var(--textM)*1.5);
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    mix-blend-mode: multiply;
+    opacity: 95%;
+}
+
+#secondtext {
+    font-size: var(--textM);
+    position: absolute;
+    top: 45%;
+    left: 55%;
+}

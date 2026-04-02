@@ -1,15 +1,15 @@
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+// const canvas = document.getElementById("canvas");
+// const ctx = canvas.getContext("2d");
 
-// https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
-// I added my image at the base of the canvas 
-const img = new Image();
+// // https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
+// // I added my image at the base of the canvas 
+// const img = new Image();
 
-img.addEventListener("load", () => {
-  ctx.drawImage(img, 0, 0);
-});
+// img.addEventListener("load", () => {
+//   ctx.drawImage(img, 0, 0);
+// });
 
-img.src = "postertest.png"; 
+// img.src = "postertest.png"; 
 
 // adding my text value to show up through innertext 
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText
@@ -74,4 +74,16 @@ const reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
     preview.classList.remove('style-1', 'style-2', 'style-3');
     preview2.classList.remove('style-1', 'style-2', 'style-3');
+});
+
+// from eric and michael to keep an image
+const input3 = document.getElementById('imageInput');
+const preview3 = document.getElementById('preview3');
+
+input3.addEventListener('change', () => {
+  const file = input3.files[0];
+  if (file) {
+    preview3.src = URL.createObjectURL(file); // Create a temporary local URL
+    preview3.style.display = 'block'
+  }
 });
