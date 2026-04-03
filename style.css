@@ -104,23 +104,39 @@ button {
 }
 
 
-img {
+#posterbox {
+    display: inline-block;
     position: relative;
+}
+
+#posterbox img {
+    display: block;
+    width: 100%;
     z-index: -1;
 }
 
 #maintext {
-    font-size: calc(var(--textM)*1.5);
+    font-size: calc(var(--textM)*1.4);
     position: absolute;
-    top: 35%;
-    left: 55%;
+    top: 20%;
+    left: 35%;
     mix-blend-mode: multiply;
     opacity: 95%;
+
+    h2 {
+        max-width: 20ch;
+    }
 }
 
 #secondtext {
     font-size: var(--textM);
     position: absolute;
-    top: 45%;
-    left: 55%;
+    top: 48%;
+    left: 35%;
+    mix-blend-mode: multiply;
+    opacity: 95%;
+}
+
+#preview3 {
+    z-index: 1;
 }

@@ -17,11 +17,11 @@
         <form>
             <section>
                 <label for="text">Add your primary text:</label>
-                <input id="primary-text" name="text" placeholder="Type here" required type="text">
+                <input id="primary-text" name="text" placeholder="Type here" required type="text" maxlength="10">
             </section>
                 <section>
                 <label for="text">Add your secondary text:</label>
-                <input id="secondary-text" name="text" placeholder="Type here" required type="text">
+                <input id="secondary-text" name="text" placeholder="Type here" required type="text" maxlength="15">
             </section>
             <section>
                 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color looked up how to add a color input-->
@@ -50,18 +50,20 @@
         </section>
         <section>
             <input type="file" id="imageInput">
-            <img id="preview3">
         </section>
         <section>
             <button type="reset" id="reset">Reset</button>
         </section>
         </section>
-        <section>
-                <h2 id="maintext">primary text</h2>
-                <p id="secondtext">secondary text</p>
                 <!-- I left the canvas in for now to come back to it -->
                 <!-- <canvas id="canvas" width="900" height="600"></canvas> -->
-                <img src="postertest.png"/>
+        <section>
+            <div id="posterbox">
+                <img src="postertest2.png"/>
+                <img id="preview3">
+                <h2 id="maintext">primary text</h2>
+                <p id="secondtext">secondary text</p>
+            </div>
         </section>
         </main>
         <footer>
