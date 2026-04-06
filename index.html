@@ -18,7 +18,7 @@
             <section>
                 <label for="text">Add your primary text:</label>
                 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/maxlength added maxlength to my inputs -->
-                <input id="primary-text" name="text" placeholder="Type here" required type="text" maxlength="10">
+                <input id="primary-text" name="text" placeholder="Type here" required type="text" maxlength="12">
             </section>
                 <section>
                 <label for="text">Add your secondary text:</label>
@@ -27,11 +27,11 @@
             <section>
                 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color looked up how to add a color input-->
                 <label for="color">Choose your primary text color</label>
-                <input type="color" id="primary-color" name="color" value="#121212"/>
+                <input type="color" id="primary-color" name="color" value="#000000"/>
             </section>
              <section>
                 <label for="color">Choose your secondary text color</label>
-                <input type="color" id="secondary-color" name="color" value="#121212"/>
+                <input type="color" id="secondary-color" name="color" value="#000000"/>
             </section>
             <!-- <section>
                 come back to this
@@ -50,6 +50,11 @@
             <button id="style-3">Style 3</button>
         </section>
         <section>
+            <label>Choose your mockup:</label>
+            <button id="image-1">Subway</button>
+            <button id="image-2">Billboard</button>
+        </section>
+        <section>
             <input type="file" id="imageInput">
         </section>
         <section>
@@ -60,8 +65,8 @@
                 <!-- <canvas id="canvas" width="900" height="600"></canvas> -->
         <section>
             <div id="posterbox">
-                <img src="postertest2.png"/>
-                <img id="preview3">
+                <img id="image" src="subway1.png"/>
+                <img id="preview3"/>
                 <h2 id="maintext">primary text</h2>
                 <p id="secondtext">secondary text</p>
             </div>

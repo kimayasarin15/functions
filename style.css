@@ -103,6 +103,9 @@ button {
     padding: calc(var(--spaceS)*0.2);
 }
 
+section {
+    padding-block: calc(var(--spaceS)*0.5);
+}
 
 #posterbox {
     display: inline-block;
@@ -116,27 +119,26 @@ button {
 }
 
 #maintext {
-    font-size: calc(var(--textM)*1.4);
+    font-size: var(--textM);
     position: absolute;
-    top: 20%;
-    left: 35%;
+    top: 25%;
+    left: 42%;
     mix-blend-mode: multiply;
     opacity: 95%;
-
-    h2 {
-        max-width: 20ch;
-    }
+    z-index: 1;
 }
 
 #secondtext {
-    font-size: var(--textM);
+    font-size: var(--textS);
     position: absolute;
-    top: 48%;
-    left: 35%;
+    top: 45%;
+    left: 42%;
     mix-blend-mode: multiply;
     opacity: 95%;
+    z-index: 1;
 }
 
+
 #preview3 {
-    z-index: 1;
+    z-index: 2;
 }

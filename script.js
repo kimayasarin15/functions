@@ -87,3 +87,13 @@ input3.addEventListener('change', () => {
     preview3.style.display = 'block'
   }
 });
+
+const image = document.querySelector('#image');
+
+document.querySelector('#image-1').addEventListener('click', () => {
+    image.src = 'subway1.png';
+});
+
+document.querySelector('#image-2').addEventListener('click', () => {
+    image.src = 'billboard1.png';
+});
