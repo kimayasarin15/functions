@@ -121,7 +121,7 @@ section {
 #maintext {
     font-size: var(--textM);
     position: absolute;
-    top: 25%;
+    top: 25%; 
     left: 42%;
     mix-blend-mode: multiply;
     opacity: 95%;
@@ -142,3 +142,4 @@ section {
 #preview3 {
     z-index: 2;
 }
+

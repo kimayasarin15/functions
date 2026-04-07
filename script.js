@@ -88,12 +88,20 @@ input3.addEventListener('change', () => {
   }
 });
 
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src - changing the image src with JS and a button
 const image = document.querySelector('#image');
+const image1 = document.querySelector('#image-1');
+const image2 = document.querySelector('#image-2');
+const image3 = document.querySelector('#image-3');
 
-document.querySelector('#image-1').addEventListener('click', () => {
-    image.src = 'subway1.png';
+image1.addEventListener('click', () => {
+    image.src = 'subway.png';
 });
 
-document.querySelector('#image-2').addEventListener('click', () => {
-    image.src = 'billboard1.png';
+image2.addEventListener('click', () => {
+    image.src = 'billboard.png';
+});
+
+image3.addEventListener('click', () => {
+    image.src = 'sidewalk.png';
 });
