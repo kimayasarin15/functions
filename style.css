@@ -21,10 +21,10 @@
 :root {
     font-size: 100%;
 
-    --font-family: "PP Editorial New";
-    --font-family1: "Ayer-Regular-Trial";
-    --font-family2: "ABC Diatype Mono Condensed";
-    --font-family3: "ABC Favorit Edu";
+    --font-family1: "PP Editorial New";
+    --font-family2: "Ayer-Regular-Trial";
+    --font-family3: "ABC Diatype Mono Condensed";
+    --font-family4: "ABC Favorit Edu";
 
     --light: #FFFFFF;
     --dark: #121212;
@@ -44,7 +44,7 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-family1);
     padding: var(--spaceL);
     text-transform: uppercase;
     block-size: 100vh;
@@ -52,10 +52,6 @@ body {
 
 h1 {
     font-size: var(--textL);
-}
-
-h2 {
-    font-size: var(--textM);
 }
 
 form {
@@ -97,6 +93,10 @@ a {
     font-family: var(--font-family3);
 }
 
+.style-4{
+    font-family: var(--font-family4);
+}
+
 button {
     background-color: var(--dark);
     color: var(--light);
@@ -115,34 +115,72 @@ section {
 #posterbox img {
     display: block;
     width: 100%;
+}
+
+#image {
     z-index: -1;
 }
 
 #maintext {
-    font-size: var(--textM);
     position: absolute;
-    top: 25%; 
-    left: 42%;
     mix-blend-mode: multiply;
     opacity: 95%;
     z-index: 1;
 }
 
 #secondtext {
-    font-size: var(--textS);
     position: absolute;
-    top: 45%;
-    left: 42%;
     mix-blend-mode: multiply;
     opacity: 95%;
     z-index: 1;
 }
 
-
+/* need to come back to crop these correctly but the images show on top! */
 #preview3 {
     z-index: 2;
     position: absolute;
     top: 0%;
     left: 0%;
+    mix-blend-mode: multiply;
+    opacity: 95%;
+    object-fit: contain;
 }
 
+/* my layout positions and text sizes */
+/* I might need to add the sizes to my styles instead because of the differences in typefaces but I will come back to that */
+
+.mainlayout-subway {
+    top: 25%; 
+    left: 42%;
+    font-size: calc(var(--textM)*0.8);
+}
+
+.secondlayout-subway {
+    top: 45%;
+    left: 42%;
+    font-size: var(--textS);
+}
+
+.mainlayout-billboard {
+    top: 35%; 
+    left: 32%;
+    font-size: calc(var(--textM)*1.5);
+}
+
+.secondlayout-billboard {
+    top: 45%;
+    left: 55%;
+    font-size: calc(var(--textM)*0.7);
+}
+
+.mainlayout-sidewalk {
+    top: 25%; 
+    left: 41%;
+    font-size: var(--textM);
+}
+
+.secondlayout-sidewalk {
+    top: 72%;
+    left: 41%;
+    font-size: calc(var(--textS)*1.2);
+}
