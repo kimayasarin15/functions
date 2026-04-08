@@ -125,25 +125,34 @@ section {
     position: absolute;
     mix-blend-mode: multiply;
     opacity: 95%;
-    z-index: 1;
+    z-index: 2;
 }
 
 #secondtext {
     position: absolute;
     mix-blend-mode: multiply;
     opacity: 95%;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* need to come back to crop these correctly but the images show on top! */
+/* https://claude.ai/share/a4934733-1cee-4a6c-b86a-29e7a849811c I asked for help for different appraoches - it suggested clip-path which I will look into */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path I copied the clip-path polygon from MDN and am trying to do it with trial and error */
+/* need to figure out how to: scale down image + add different clip paths for different images */
 #preview3 {
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     top: 0%;
     left: 0%;
     mix-blend-mode: multiply;
     opacity: 95%;
     object-fit: contain;
+    /* I did this with A LOT of trial and error - values for me to remember / edit later
+    44:left
+    24.5: top
+    57.5: right
+    64: bottom */
+    clip-path: polygon(44% 24.5%, 57.5% 24.5%, 57.5% 64%, 44% 64%);
 }
 
 /* my layout positions and text sizes */
