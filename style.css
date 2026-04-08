@@ -150,15 +150,15 @@ section {
 /* I might need to add the sizes to my styles instead because of the differences in typefaces but I will come back to that */
 
 .mainlayout-subway {
-    top: 25%; 
-    left: 42%;
-    font-size: calc(var(--textM)*0.8);
+    top: 28%; 
+    left: 45.5%;
+    font-size: var(--textS);
 }
 
 .secondlayout-subway {
-    top: 45%;
-    left: 42%;
-    font-size: var(--textS);
+    top: 40%;
+    left: 45.5%;
+    font-size: calc(var(--textS)*0.7);
 }
 
 .mainlayout-billboard {
@@ -176,7 +176,7 @@ section {
 .mainlayout-sidewalk {
     top: 25%; 
     left: 41%;
-    font-size: var(--textM);
+    font-size: calc(var(--textM)*0.9);
 }
 
 .secondlayout-sidewalk {

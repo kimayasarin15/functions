@@ -80,8 +80,8 @@ secondaryColor.addEventListener('input', () => {
 // removed classes with a reset button but need to figure out how to remove the color
 const reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
-    preview.classList.remove('style-1', 'style-2', 'style-3');
-    preview2.classList.remove('style-1', 'style-2', 'style-3');
+    preview.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+    preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
 });
 
 // from eric and michael to keep an image
