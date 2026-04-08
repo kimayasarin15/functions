@@ -184,3 +184,15 @@ section {
     left: 41%;
     font-size: calc(var(--textS)*1.2);
 }
+
+
+/* need to come back to this - I can make it responsive but the images are really small on a phone - I think this works better on desktop */
+
+@media (width<950px) {
+    .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+}
