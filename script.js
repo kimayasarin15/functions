@@ -137,7 +137,7 @@ image3.addEventListener('click', () => {
     preview.classList.add('mainlayout-sidewalk');
     preview2.classList.remove('secondlayout-subway', 'secondlayout-billboard');
     preview2.classList.add('secondlayout-sidewalk');
-      preview3box.classList.remove('preview3-box-subway','preview3-box-billboard');
+    preview3box.classList.remove('preview3-box-subway','preview3-box-billboard');
     preview3box.classList.add('preview3-box-sidewalk');
 });
 
@@ -156,6 +156,7 @@ modeText.addEventListener('click', () => {
     imageControls.style.display = 'none';
     preview.style.display = 'block';
     preview2.style.display = 'block';
+    preview3.style.display = 'none';
 });
 
 modeImage.addEventListener('click', () => {
@@ -165,5 +166,4 @@ modeImage.addEventListener('click', () => {
     preview.style.display = 'none';
     preview2.style.display = 'none';
 });
-
 

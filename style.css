@@ -48,7 +48,7 @@
 body {
     font-family: var(--font-family1);
     padding: var(--spaceL);
-    font-size: var(--textS);
+    font-size: calc(var(--textS)*1.2);
     /* text-transform: uppercase; */
     /* block-size: 100vh; */
 }
@@ -91,7 +91,7 @@ a {
 }
 
 #main-form {
-    width: 15%;            
+    width: 20%;            
     flex-shrink: 0;          
 }
 #image-form {
@@ -255,10 +255,35 @@ section {
     }
     #image-form {
     width: 100%;
+    overflow: hidden;
     }
     h1 {
     font-size: var(--textM);
-    }   
+    }  
+
+    /* .mainlayout-subway {
+        font-size: var(--textS);
+    }
+
+    .secondlayout-subway {
+        font-size: calc(var(--textS)*0.7);
+    }
+
+    .mainlayout-billboard {
+        font-size: calc(var(--textM)*1.2);
+    }
+
+    .secondlayout-billboard {
+        font-size: calc(var(--textM)*0.6);
+    }
+
+    .mainlayout-sidewalk {
+        font-size: calc(var(--textM)*0.9);
+    }
+
+    .secondlayout-sidewalk {
+        font-size: calc(var(--textS)*1.2);
+    } */
 
 }
 
