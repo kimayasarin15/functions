@@ -48,11 +48,14 @@
 body {
     font-family: var(--font-family1);
     padding: var(--spaceL);
+    font-size: var(--textS);
     /* text-transform: uppercase; */
     /* block-size: 100vh; */
 }
 
-
+p {
+    padding-block-end: var(--spaceS);
+}
 
 h1 {
     font-size: var(--textL);
@@ -87,6 +90,14 @@ a {
     justify-content: space-between;
 }
 
+#main-form {
+    width: 15%;            
+    flex-shrink: 0;          
+}
+#image-form {
+    width: 70%;
+}
+
 .style-1 {
     font-family: var(--font-family1);
 }
@@ -106,7 +117,9 @@ a {
 button {
     background-color: var(--dark);
     color: var(--light);
-    padding: calc(var(--spaceS)*0.2);
+    padding: calc(var(--spaceS)*0.4);
+    border-radius: 5px;
+
 }
 
 section {
@@ -237,6 +250,15 @@ section {
     flex-direction: column-reverse;
     justify-content: space-between;
     }
+    #main-form {
+    width: 100%;                      
+    }
+    #image-form {
+    width: 100%;
+    }
+    h1 {
+    font-size: var(--textM);
+    }   
 
 }
 
