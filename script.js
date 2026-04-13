@@ -96,11 +96,11 @@ input3.addEventListener('change', () => {
   }
 });
 
-// I wanted to add that if a user clicks the image button the text doesn't show - but might make them separate buttons
-input3.addEventListener('click', () => { 
-    preview.style.display = 'none';
-    preview2.style.display = 'none';
-});
+// I wanted to add that if a user clicks the image button the text doesn't show - but might make them separate buttons dont need this anymore - toggles below
+// input3.addEventListener('click', () => { 
+//     preview.style.display = 'none';
+//     preview2.style.display = 'none';
+// });
 
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src - changing the image src with JS and a button
 
@@ -142,6 +142,8 @@ image3.addEventListener('click', () => {
 });
 
 
+// two buttons for my 'modes'
+
 const modeText = document.querySelector('#text-mode');
 const modeImage = document.querySelector('#image-mode');
 const textControls = document.querySelector('#text-controls');
@@ -163,3 +165,5 @@ modeImage.addEventListener('click', () => {
     preview.style.display = 'none';
     preview2.style.display = 'none';
 });
+
+
