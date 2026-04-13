@@ -96,6 +96,12 @@ input3.addEventListener('change', () => {
   }
 });
 
+// I wanted to add that if a user clicks the image button the text doesn't show - but might make them separate buttons
+input3.addEventListener('click', () => { 
+    preview.style.display = 'none';
+    preview2.style.display = 'none';
+});
+
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src - changing the image src with JS and a button
 
 // https://claude.ai/share/679d9a71-65bc-4683-9a79-91a3ab7643eb I pasted in the same question to Claude and asked for it not to give me any code - I just wanted to check this was the correct way to do it - I'm adding and removing my classes then I click the buttons
@@ -103,6 +109,7 @@ const image = document.querySelector('#image');
 const image1 = document.querySelector('#image-1');
 const image2 = document.querySelector('#image-2');
 const image3 = document.querySelector('#image-3');
+const preview3box = document.getElementById('preview3-box');
 
 image1.addEventListener('click', () => {
     image.src = 'subway.png';
@@ -110,6 +117,8 @@ image1.addEventListener('click', () => {
     preview.classList.add('mainlayout-subway');
     preview2.classList.remove('secondlayout-billboard', 'secondlayout-sidewalk');
     preview2.classList.add('secondlayout-subway');
+    preview3box.classList.remove('preview3-box-billboard','preview3-box-sidewalk');
+    preview3box.classList.add('preview3-box-subway');
 });
 
 image2.addEventListener('click', () => {
@@ -118,6 +127,8 @@ image2.addEventListener('click', () => {
     preview.classList.add('mainlayout-billboard');
     preview2.classList.remove('secondlayout-subway', 'secondlayout-sidewalk');
     preview2.classList.add('secondlayout-billboard');
+    preview3box.classList.remove('preview3-box-subway','preview3-box-sidewalk');
+    preview3box.classList.add('preview3-box-billboard');
 });
 
 image3.addEventListener('click', () => {
@@ -126,4 +137,6 @@ image3.addEventListener('click', () => {
     preview.classList.add('mainlayout-sidewalk');
     preview2.classList.remove('secondlayout-subway', 'secondlayout-billboard');
     preview2.classList.add('secondlayout-sidewalk');
+      preview3box.classList.remove('preview3-box-subway','preview3-box-billboard');
+    preview3box.classList.add('preview3-box-sidewalk');
 });
