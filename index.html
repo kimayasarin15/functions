@@ -13,57 +13,68 @@
         </header>
         <main class="grid">
         <section id="main-form">
-        <section>
-            <label>Choose your mockup:</label>
-            <br>
-            <button id="image-1">Subway</button>
-            <button id="image-2">Billboard</button>
-            <button id="image-3">Sidewalk</button>
-        </section>
-        <section>
-            <label>Choose your style:</label>
-            <br>
-            <button id="style-1">Style 1</button>
-            <button id="style-2">Style 2</button>
-            <button id="style-3">Style 3</button>
-            <button id="style-4">Style 4</button>
-        </section>
-        <form>
             <section>
-                <label for="text">Add your primary text:</label>
-                <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/maxlength added maxlength to my inputs -->
-                <input id="primary-text" name="text" placeholder="Type here" required type="text" maxlength="12">
-            </section>
-                <section>
-                <label for="text">Add your secondary text:</label>
-                <input id="secondary-text" name="text" placeholder="Type here" required type="text" maxlength="15">
+                <p>Choose your mockup:</p>
+                <button id="image-1">Subway</button>
+                <button id="image-2">Billboard</button>
+                <button id="image-3">Sidewalk</button>
             </section>
             <section>
-                <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color looked up how to add a color input-->
-                <label for="color">Choose your primary text color</label>
-                <input type="color" id="primary-color" name="color" value="#000000"/>
+                <p>Choose your method:</p>
+                <button id="image-mode">Image</button>
+                <button id="text-mode">Text</button>
             </section>
-             <section>
-                <label for="color">Choose your secondary text color</label>
-                <input type="color" id="secondary-color" name="color" value="#000000"/>
+            <section id="image-controls">                    
+                <label for="image">Choose your image:</label>
+                <input type="file" id="imageInput">
             </section>
-        </form>
-        <section>
-            <label for="image">Or add an image</label>
-            <input type="file" id="imageInput">
+            <section id="text-controls">
+            <form>
+                    <section>
+                        <label for="text">Add your primary text:</label>
+                        <br>
+                        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/maxlength added maxlength to my inputs -->
+                        <input id="primary-text" name="text" placeholder="Type here" required type="text" maxlength="12">
+                    </section>
+                        <section>
+                        <label for="text">Add your secondary text:</label>
+                        <br>
+                        <input id="secondary-text" name="text" placeholder="Type here" required type="text" maxlength="15">
+                    </section>
+                    <section>
+                        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color looked up how to add a color input-->
+                        <label for="color">Choose your primary text color</label>
+                        <br>
+                        <input type="color" id="primary-color" name="color" value="#000000"/>
+                    </section>
+                    <section>
+                        <label for="color">Choose your secondary text color</label>
+                        <br>
+                        <input type="color" id="secondary-color" name="color" value="#000000"/>
+                    </section>
+            </form>
+            <section>
+                    <p>Choose your style:</p>
+                    <button id="style-1">Style 1</button>
+                    <button id="style-2">Style 2</button>
+                    <button id="style-3">Style 3</button>
+                    <button id="style-4">Style 4</button>
+            </section>
+            <section>
+                    <button type="reset" id="reset">Reset</button>
+            </section>
         </section>
-        <section>
-            <button type="reset" id="reset">Reset</button>
         </section>
-        </section>
-        <section>
+        <section class="image-form">
             <div id="posterbox">
                 <img id="image" src="subway.png"/>
                 <div id="preview3-box" class="preview3-box-subway">
                 <img id="preview3"/>
                 </div>
-                <h2 id="maintext" class="mainlayout-subway">primary text</h2>
-                <p id="secondtext" class="secondlayout-subway">secondary text</p>
+                <div id="text-controls-poster">
+                <h2 id="maintext" class="mainlayout-subway">Primary text</h2>
+                <p id="secondtext" class="secondlayout-subway">Secondary text</p>
+                </div>
             </div>
         </section>
         </main>

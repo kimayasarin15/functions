@@ -18,9 +18,11 @@
     src: url("fonts/Ayer-Regular-Trial.otf") format("opentype");
 }
 
+
+
 :root {
     font-size: 100%;
-
+    
     --font-family1: "PP Editorial New";
     --font-family2: "Ayer-Regular-Trial";
     --font-family3: "ABC Diatype Mono Condensed";
@@ -46,12 +48,16 @@
 body {
     font-family: var(--font-family1);
     padding: var(--spaceL);
-    text-transform: uppercase;
-    block-size: 100vh;
+    /* text-transform: uppercase; */
+    /* block-size: 100vh; */
 }
+
+
 
 h1 {
     font-size: var(--textL);
+    text-transform: uppercase; 
+    padding-block: var(--spaceS);
 }
 
 form {
@@ -114,7 +120,6 @@ section {
 
 #posterbox img {
     display: block;
-    /* width: 100%; */
 }
 
 #image {
@@ -233,4 +238,16 @@ section {
     justify-content: space-between;
     }
 
+}
+
+#image-controls {
+    display: none;
+}
+
+#text-controls {
+    display: none;
+}
+
+#text-controls-poster {
+    display: none;
 }

@@ -140,3 +140,26 @@ image3.addEventListener('click', () => {
       preview3box.classList.remove('preview3-box-subway','preview3-box-billboard');
     preview3box.classList.add('preview3-box-sidewalk');
 });
+
+
+const modeText = document.querySelector('#text-mode');
+const modeImage = document.querySelector('#image-mode');
+const textControls = document.querySelector('#text-controls');
+const textControls2 = document.querySelector('#text-controls-poster');
+const imageControls = document.querySelector('#image-controls');
+
+modeText.addEventListener('click', () => {
+    textControls.style.display = 'block';
+    textControls2.style.display = 'block';
+    imageControls.style.display = 'none';
+    preview.style.display = 'block';
+    preview2.style.display = 'block';
+});
+
+modeImage.addEventListener('click', () => {
+    textControls.style.display = 'none';
+    textControls2.style.display = 'none';
+    imageControls.style.display = 'block';
+    preview.style.display = 'none';
+    preview2.style.display = 'none';
+});
