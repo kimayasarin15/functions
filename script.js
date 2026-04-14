@@ -14,18 +14,18 @@
 // adding my text value to show up through innertext 
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText
 
-const input = document.querySelector('#primary-text');
-const preview = document.querySelector('#maintext');
+const mainInput = document.querySelector('#primary-text');
+const mainText = document.querySelector('#maintext');
 
-input.addEventListener('input', () => {
-    preview.innerText = input.value;
+mainInput.addEventListener('input', () => {
+    mainText.innerText = mainInput.value;
 });
 
-const input2 = document.querySelector('#secondary-text');
-const preview2 = document.querySelector('#secondtext');
+const secondInput = document.querySelector('#secondary-text');
+const secondText = document.querySelector('#secondtext');
 
-input2.addEventListener('input', () => {
-    preview2.innerText = input2.value;
+secondInput.addEventListener('input', () => {
+    secondText = secondInput.value;
 });
 
 
@@ -33,10 +33,10 @@ input2.addEventListener('input', () => {
 
 const style1 = document.querySelector('#style-1');
 style1.addEventListener('click', () => {
-    preview.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-    preview.classList.add('style-1');
-    preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-    preview2.classList.add('style-1');
+    mainText.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+    mainText.classList.add('style-1');
+    secondText.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+    secondText.classList.add('style-1');
     style1.classList.add('active');
     style2.classList.remove('active');
     style3.classList.remove('active');
@@ -45,10 +45,10 @@ style1.addEventListener('click', () => {
 
 const style2 = document.querySelector('#style-2');
 style2.addEventListener('click', () => {
-    preview.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-    preview.classList.add('style-2');
-    preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-    preview2.classList.add('style-2');
+    mainText.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+    mainText.classList.add('style-2');
+    secondText.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+    secondText.classList.add('style-2');
     style2.classList.add('active');
     style1.classList.remove('active');
     style3.classList.remove('active');
@@ -57,10 +57,10 @@ style2.addEventListener('click', () => {
 
 const style3 = document.querySelector('#style-3');
 style3.addEventListener('click', () => {
-    preview.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-    preview.classList.add('style-3');
-    preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-    preview2.classList.add('style-3');
+    mainText.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+    mainText.classList.add('style-3');
+    secondText.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+    secondText.classList.add('style-3');
     style3.classList.add('active');
     style1.classList.remove('active');
     style2.classList.remove('active');
@@ -69,10 +69,10 @@ style3.addEventListener('click', () => {
 
 const style4 = document.querySelector('#style-4');
 style4.addEventListener('click', () => {
-    preview.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-    preview.classList.add('style-4');
-    preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-    preview2.classList.add('style-4');
+    mainText.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+    mainText.classList.add('style-4');
+    secondText.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+    secondText.classList.add('style-4');
     style4.classList.add('active');
     style1.classList.remove('active');
     style2.classList.remove('active');
@@ -84,12 +84,12 @@ style4.addEventListener('click', () => {
 
 const primaryColor = document.querySelector('#primary-color');
 primaryColor.addEventListener('input', () => {
-    preview.style.color = primaryColor.value;
+    mainText.style.color = primaryColor.value;
 });
 
 const secondaryColor = document.querySelector('#secondary-color');
 secondaryColor.addEventListener('input', () => {
-    preview2.style.color = secondaryColor.value;
+    secondText.style.color = secondaryColor.value;
 });
 
 
@@ -102,16 +102,33 @@ secondaryColor.addEventListener('input', () => {
 // });
 
 // from eric and michael to keep an image
-const input3 = document.getElementById('imageInput');
-const preview3 = document.getElementById('preview3');
+// const input3 = document.getElementById('imageInput');
+// const preview3 = document.getElementById('preview3');
 
-input3.addEventListener('change', () => {
-  const file = input3.files[0];
+// input3.addEventListener('change', () => {
+//   const file = input3.files[0];
+//   if (file) {
+//     preview3.src = URL.createObjectURL(file); // Create a temporary local URL
+//     preview3.style.display = 'block'
+//   }
+// });
+
+// test
+
+// my variable for my input - my variable for container is already defined in preview3
+const mainImage = document.getElementById('imageInput');
+
+mainImage.addEventListener('change', () => {
+  const file = mainImage.files[0];
   if (file) {
-    preview3.src = URL.createObjectURL(file); // Create a temporary local URL
-    preview3.style.display = 'block'
+    // this is creating a new variable for my URL and using innerHTML is is creating an image when the user uploads it
+    const uploadedUrl = URL.createObjectURL(file); // Create a temporary local URL
+    // creating an image tag with the source of the URL in my preview3 box
+    imageContainer.innerHTML = `<img src="${uploadedUrl}">`
   }
 });
+
+
 
 // I wanted to add that if a user clicks the image button the text doesn't show - but might make them separate buttons dont need this anymore - toggles below
 // input3.addEventListener('click', () => { 
@@ -125,48 +142,48 @@ input3.addEventListener('change', () => {
 // I used Claude to help me understand the logic of 'active' states for buttons - I'm just adding the active class - https://claude.ai/share/4d989eb1-5ff7-4c20-a925-a53d8c66cedf - I so far will just be writing them all one by one because that helps me understand it - but need to see if there is a better way to do it
 
 const image = document.querySelector('#image');
-const image1 = document.querySelector('#image-1');
-const image2 = document.querySelector('#image-2');
-const image3 = document.querySelector('#image-3');
-const preview3box = document.getElementById('preview3-box');
+const subway = document.querySelector('#image-1');
+const billboard = document.querySelector('#image-2');
+const sidewalk = document.querySelector('#image-3');
+const imageContainer = document.getElementById('preview3-box');
 
-image1.addEventListener('click', () => {
+subway.addEventListener('click', () => {
     image.src = 'subway.png';
-    preview.classList.remove('mainlayout-billboard', 'mainlayout-sidewalk');
-    preview.classList.add('mainlayout-subway');
-    preview2.classList.remove('secondlayout-billboard', 'secondlayout-sidewalk');
-    preview2.classList.add('secondlayout-subway');
-    preview3box.classList.remove('preview3-box-billboard','preview3-box-sidewalk');
-    preview3box.classList.add('preview3-box-subway');
-    image1.classList.add('active');
-    image2.classList.remove('active');
-    image3.classList.remove('active');
+    mainText.classList.remove('mainlayout-billboard', 'mainlayout-sidewalk');
+    mainText.classList.add('mainlayout-subway');
+    secondText.classList.remove('secondlayout-billboard', 'secondlayout-sidewalk');
+    secondText.classList.add('secondlayout-subway');
+    imageContainer.classList.remove('preview3-box-billboard','preview3-box-sidewalk');
+    imageContainer.classList.add('preview3-box-subway');
+    subway.classList.add('active');
+    billboard.classList.remove('active');
+    sidewalk.classList.remove('active');
 });
 
-image2.addEventListener('click', () => {
+billboard.addEventListener('click', () => {
     image.src = 'billboard.png';
-    preview.classList.remove('mainlayout-subway', 'mainlayout-sidewalk');
-    preview.classList.add('mainlayout-billboard');
-    preview2.classList.remove('secondlayout-subway', 'secondlayout-sidewalk');
-    preview2.classList.add('secondlayout-billboard');
-    preview3box.classList.remove('preview3-box-subway','preview3-box-sidewalk');
-    preview3box.classList.add('preview3-box-billboard');
-    image2.classList.add('active');
-    image1.classList.remove('active');
-    image3.classList.remove('active');
+    mainText.classList.remove('mainlayout-subway', 'mainlayout-sidewalk');
+    mainText.classList.add('mainlayout-billboard');
+    secondText.classList.remove('secondlayout-subway', 'secondlayout-sidewalk');
+    secondText.classList.add('secondlayout-billboard');
+    imageContainer.classList.remove('preview3-box-subway','preview3-box-sidewalk');
+    imageContainer.classList.add('preview3-box-billboard');
+    billboard.classList.add('active');
+    subway.classList.remove('active');
+    sidewalk.classList.remove('active');
 });
 
-image3.addEventListener('click', () => {
+sidewalk.addEventListener('click', () => {
     image.src = 'sidewalk.png';
-    preview.classList.remove('mainlayout-subway', 'mainlayout-billboard');
-    preview.classList.add('mainlayout-sidewalk');
-    preview2.classList.remove('secondlayout-subway', 'secondlayout-billboard');
-    preview2.classList.add('secondlayout-sidewalk');
-    preview3box.classList.remove('preview3-box-subway','preview3-box-billboard');
-    preview3box.classList.add('preview3-box-sidewalk');
-    image3.classList.add('active');
-    image1.classList.remove('active');
-    image2.classList.remove('active');
+    mainText.classList.remove('mainlayout-subway', 'mainlayout-billboard');
+    mainText.classList.add('mainlayout-sidewalk');
+    secondText.classList.remove('secondlayout-subway', 'secondlayout-billboard');
+    secondText.classList.add('secondlayout-sidewalk');
+    imageContainer.classList.remove('preview3-box-subway','preview3-box-billboard');
+    imageContainer.classList.add('preview3-box-sidewalk');
+    sidewalk.classList.add('active');
+    subway.classList.remove('active');
+    billboard.classList.remove('active');
 });
 
 
@@ -182,19 +199,19 @@ modeText.addEventListener('click', () => {
     textControls.style.display = 'block';
     textControls2.style.display = 'block';
     imageControls.style.display = 'none';
-    preview.style.display = 'block';
-    preview2.style.display = 'block';
-    preview3.style.display = 'none';
+    mainText.style.display = 'block';
+    secondText.style.display = 'block';
     modeText.classList.add('active');
     modeImage.classList.remove('active');
+    imageContainer.style.display = 'none';
 });
 
 modeImage.addEventListener('click', () => {
     textControls.style.display = 'none';
     textControls2.style.display = 'none';
     imageControls.style.display = 'block';
-    preview.style.display = 'none';
-    preview2.style.display = 'none';
+    mainText.style.display = 'none';
+    secondText.style.display = 'none';
     modeImage.classList.add('active');
     modeText.classList.remove('active');
 });

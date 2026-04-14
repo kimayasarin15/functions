@@ -166,7 +166,7 @@ section {
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path I copied the clip-path polygon from MDN and am trying to do it with trial and error */
 /* need to figure out how to: scale down image + add different clip paths for different images */
 
-#preview3 {
+#preview3-box img {
     z-index: 1;
     mix-blend-mode: multiply;
     opacity: 95%;  
