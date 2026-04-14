@@ -25,7 +25,7 @@ const secondInput = document.querySelector('#secondary-text');
 const secondText = document.querySelector('#secondtext');
 
 secondInput.addEventListener('input', () => {
-    secondText = secondInput.value;
+    secondText.innerText = secondInput.value;
 });
 
 
