@@ -22,26 +22,17 @@
 
 
 
-// import { toPng } from 'https://unpkg.com/html-to-image?module'
-
-// const yourImage = document.querySelector('#posterbox')
-
-// // This function comes from the library.
-// toPng(yourImage)
-// 	.then(dataUrl => {
-// 		// Make an image with the function output as the `src`.
-// 		const img = `<img src="${dataUrl}">`
-
-// 		// Just puts it at the end. You will probably want to do something else!
-// 		document.body.insertAdjacentHTML('beforeend', img)
-// 	})
-
 import { toPng } from 'https://unpkg.com/html-to-image?module'
 
 const yourImage = document.querySelector('#posterbox')
 
+// This function comes from the library.
 toPng(yourImage)
-    .then(dataUrl => {
-        const img = `<img src="${dataUrl}">`
-        document.body.insertAdjacentHTML('beforeend', img)
-    })
+	.then(dataUrl => {
+		// Make an image with the function output as the `src`.
+		const img = `<img src="${dataUrl}">`
+
+	
+		document.body.insertAdjacentHTML('beforeend', img)
+	})
+
