@@ -38,16 +38,16 @@ toPng(yourImage)
 
 
 // come back to this
-import { toPng } from 'https://unpkg.com/html-to-image?module'
+// import { toPng } from 'https://unpkg.com/html-to-image?module'
 
-const download = document.querySelector('#download');
+// const download = document.querySelector('#download');
 
-download.addEventListener('click', () => {
-    toPng(document.querySelector('#posterbox'))
-        .then((dataUrl) => {
-            const link = document.createElement('a');
-            link.download = 'image.png';
-            link.href = dataUrl;
-            link.click();
-        });
-});
+// download.addEventListener('click', () => {
+//     toPng(document.querySelector('#posterbox'))
+//         .then((dataUrl) => {
+//             const link = document.createElement('a');
+//             link.download = 'image.png';
+//             link.href = dataUrl;
+//             link.click();
+//         });
+// });
