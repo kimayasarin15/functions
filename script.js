@@ -37,6 +37,10 @@ style1.addEventListener('click', () => {
     preview.classList.add('style-1');
     preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
     preview2.classList.add('style-1');
+    style1.classList.add('active');
+    style2.classList.remove('active');
+    style3.classList.remove('active');
+    style4.classList.remove('active');
 });
 
 const style2 = document.querySelector('#style-2');
@@ -45,6 +49,10 @@ style2.addEventListener('click', () => {
     preview.classList.add('style-2');
     preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
     preview2.classList.add('style-2');
+    style2.classList.add('active');
+    style1.classList.remove('active');
+    style3.classList.remove('active');
+    style4.classList.remove('active');
 });
 
 const style3 = document.querySelector('#style-3');
@@ -53,6 +61,10 @@ style3.addEventListener('click', () => {
     preview.classList.add('style-3');
     preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
     preview2.classList.add('style-3');
+    style3.classList.add('active');
+    style1.classList.remove('active');
+    style2.classList.remove('active');
+    style4.classList.remove('active');
 });
 
 const style4 = document.querySelector('#style-4');
@@ -61,6 +73,10 @@ style4.addEventListener('click', () => {
     preview.classList.add('style-4');
     preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
     preview2.classList.add('style-4');
+    style4.classList.add('active');
+    style1.classList.remove('active');
+    style2.classList.remove('active');
+    style3.classList.remove('active');
 });
 
 // adding my color pickers https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color
@@ -78,11 +94,12 @@ secondaryColor.addEventListener('input', () => {
 
 
 // removed classes with a reset button but need to figure out how to remove the color
-const reset = document.querySelector('#reset');
-reset.addEventListener('click', () => {
-    preview.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-    preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
-});
+// removed this for now but not need it
+// const reset = document.querySelector('#reset');
+// reset.addEventListener('click', () => {
+//     preview.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+//     preview2.classList.remove('style-1', 'style-2', 'style-3', 'style-4');
+// });
 
 // from eric and michael to keep an image
 const input3 = document.getElementById('imageInput');
@@ -105,6 +122,8 @@ input3.addEventListener('change', () => {
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src - changing the image src with JS and a button
 
 // https://claude.ai/share/679d9a71-65bc-4683-9a79-91a3ab7643eb I pasted in the same question to Claude and asked for it not to give me any code - I just wanted to check this was the correct way to do it - I'm adding and removing my classes then I click the buttons
+// I used Claude to help me understand the logic of 'active' states for buttons - I'm just adding the active class - https://claude.ai/share/4d989eb1-5ff7-4c20-a925-a53d8c66cedf - I so far will just be writing them all one by one because that helps me understand it - but need to see if there is a better way to do it
+
 const image = document.querySelector('#image');
 const image1 = document.querySelector('#image-1');
 const image2 = document.querySelector('#image-2');
@@ -119,6 +138,9 @@ image1.addEventListener('click', () => {
     preview2.classList.add('secondlayout-subway');
     preview3box.classList.remove('preview3-box-billboard','preview3-box-sidewalk');
     preview3box.classList.add('preview3-box-subway');
+    image1.classList.add('active');
+    image2.classList.remove('active');
+    image3.classList.remove('active');
 });
 
 image2.addEventListener('click', () => {
@@ -129,6 +151,9 @@ image2.addEventListener('click', () => {
     preview2.classList.add('secondlayout-billboard');
     preview3box.classList.remove('preview3-box-subway','preview3-box-sidewalk');
     preview3box.classList.add('preview3-box-billboard');
+    image2.classList.add('active');
+    image1.classList.remove('active');
+    image3.classList.remove('active');
 });
 
 image3.addEventListener('click', () => {
@@ -139,6 +164,9 @@ image3.addEventListener('click', () => {
     preview2.classList.add('secondlayout-sidewalk');
     preview3box.classList.remove('preview3-box-subway','preview3-box-billboard');
     preview3box.classList.add('preview3-box-sidewalk');
+    image3.classList.add('active');
+    image1.classList.remove('active');
+    image2.classList.remove('active');
 });
 
 
@@ -157,6 +185,8 @@ modeText.addEventListener('click', () => {
     preview.style.display = 'block';
     preview2.style.display = 'block';
     preview3.style.display = 'none';
+    modeText.classList.add('active');
+    modeImage.classList.remove('active');
 });
 
 modeImage.addEventListener('click', () => {
@@ -165,5 +195,7 @@ modeImage.addEventListener('click', () => {
     imageControls.style.display = 'block';
     preview.style.display = 'none';
     preview2.style.display = 'none';
+    modeImage.classList.add('active');
+    modeText.classList.remove('active');
 });
 
