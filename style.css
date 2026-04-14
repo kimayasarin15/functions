@@ -204,88 +204,44 @@ section {
 
 
 /* my layout positions and text sizes */
-
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp used clamp for the font size so it resizes better than manually doing it with media queries
+couldn't figure out container queries but will come back to that */
 .mainlayout-subway {
     top: 28%; 
     left: 45.5%;
-    font-size: var(--textS);
+    font-size: clamp(0.4rem, 1.2vw, 1.8rem);
 }
 
 .secondlayout-subway {
     top: 40%;
     left: 45.5%;
-    font-size: calc(var(--textS)*0.7);
+    font-size: clamp(0.3rem, 0.85vw, 0.9rem);
 }
 
 .mainlayout-billboard {
     top: 35%; 
     left: 32%;
-    font-size: calc(var(--textM)*1.5);
+    font-size: clamp(1rem, 4vw, 3.2rem);
 }
 
 .secondlayout-billboard {
-    top: 45%;
+    top: 55%;
     left: 55%;
-    font-size: calc(var(--textM)*0.7);
+    font-size: clamp(0.5rem, 2vw, 1.6rem);
 }
 
 .mainlayout-sidewalk {
     top: 25%; 
     left: 41%;
-    font-size: calc(var(--textM)*0.9);
+    font-size: clamp(0.8rem, 2.5vw, 2rem);
 }
 
 .secondlayout-sidewalk {
-    top: 72%;
+    top: 70%;
     left: 41%;
-    font-size: calc(var(--textS)*1.2);
+    font-size: clamp(0.5rem, 1.5vw, 1.2rem);
 }
 
-
-/* need to come back to this - I can make it responsive but the images are really small on a phone - I think this works better on desktop */
-
-@media (width<950px) {
-    .grid {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    }
-    #main-form {
-    width: 100%;                      
-    }
-    #image-form {
-    width: 100%;
-    overflow: hidden;
-    }
-    h1 {
-    font-size: var(--textM);
-    }  
-
-    /* .mainlayout-subway {
-        font-size: var(--textS);
-    }
-
-    .secondlayout-subway {
-        font-size: calc(var(--textS)*0.7);
-    }
-
-    .mainlayout-billboard {
-        font-size: calc(var(--textM)*1.2);
-    }
-
-    .secondlayout-billboard {
-        font-size: calc(var(--textM)*0.6);
-    }
-
-    .mainlayout-sidewalk {
-        font-size: calc(var(--textM)*0.9);
-    }
-
-    .secondlayout-sidewalk {
-        font-size: calc(var(--textS)*1.2);
-    } */
-
-}
 
 #image-controls {
     display: none;
@@ -298,3 +254,74 @@ section {
 #text-controls-poster {
     display: none;
 }
+
+
+@media (width<950px) {
+    .grid {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    }
+    #main-form {
+    width: 100%;                      
+    }
+    #image-form {
+    width: 100%;
+    }
+    h1 {
+    font-size: var(--textM);
+    }  
+
+}
+
+/* @media (width<750px) {
+    .mainlayout-subway {
+        font-size: calc(var(--textS)*0.7);
+    }
+
+    .secondlayout-subway {
+        font-size: calc(var(--textS)*0.5);
+    }
+
+    .mainlayout-billboard {
+        font-size: calc(var(--textM)*1.2);
+    }
+
+    .secondlayout-billboard {
+        font-size: calc(var(--textM)*0.6);
+    }
+
+    .mainlayout-sidewalk {
+        font-size: calc(var(--textM)*0.8);
+    }
+
+    .secondlayout-sidewalk {
+        font-size: var(--textS);
+    } 
+}
+
+@media (width<450px) {
+    .mainlayout-subway {
+        font-size: calc(var(--textS)*0.4);
+    }
+
+    .secondlayout-subway {
+        font-size: calc(var(--textS)*0.3);
+    }
+
+    .mainlayout-billboard {
+        font-size: calc(var(--textM)*0.65);
+    }
+
+    .secondlayout-billboard {
+        font-size: calc(var(--textM)*0.25);
+    }
+
+    .mainlayout-sidewalk {
+        font-size: calc(var(--textS)*0.75);
+    }
+
+    .secondlayout-sidewalk {
+        font-size: calc(var(--textS)*0.4);
+    }
+} */
