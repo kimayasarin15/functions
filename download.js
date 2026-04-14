@@ -22,17 +22,31 @@
 
 
 
-import { toPng } from 'https://unpkg.com/html-to-image?module'
+// import { toPng } from 'https://unpkg.com/html-to-image?module'
 
-const yourImage = document.querySelector('#posterbox')
+// const yourImage = document.querySelector('#posterbox')
 
-// This function comes from the library.
-toPng(yourImage)
-	.then(dataUrl => {
-		// Make an image with the function output as the `src`.
-		const img = `<img src="${dataUrl}">`
+// // This function comes from the library.
+// toPng(yourImage)
+// 	.then(dataUrl => {
+// 		// Make an image with the function output as the `src`.
+// 		const img = `<img src="${dataUrl}">`
 
 	
-		document.body.insertAdjacentHTML('beforeend', img)
-	})
+// 		document.body.insertAdjacentHTML('beforeend', img)
+// 	})
 
+
+// come back to this
+
+const download = document.querySelector('#download');
+
+download.addEventListener('click', () => {
+    toPng(document.querySelector('#posterbox'))
+        .then((dataUrl) => {
+            const link = document.createElement('a');
+            link.download = 'image.png';
+            link.href = dataUrl;
+            link.click();
+        });
+});

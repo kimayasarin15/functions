@@ -118,7 +118,7 @@ button {
     background-color: var(--dark);
     color: var(--light);
     padding: calc(var(--spaceS)*0.4);
-    border-radius: 5px;
+    border-radius: 3px;
 
 }
 
@@ -274,54 +274,19 @@ couldn't figure out container queries but will come back to that */
 
 }
 
-/* @media (width<750px) {
-    .mainlayout-subway {
-        font-size: calc(var(--textS)*0.7);
-    }
 
-    .secondlayout-subway {
-        font-size: calc(var(--textS)*0.5);
-    }
+/* https://rebeccamdeprey.com/blog/styling-the-html-color-input
+I found this article to help style my input color */
 
-    .mainlayout-billboard {
-        font-size: calc(var(--textM)*1.2);
-    }
-
-    .secondlayout-billboard {
-        font-size: calc(var(--textM)*0.6);
-    }
-
-    .mainlayout-sidewalk {
-        font-size: calc(var(--textM)*0.8);
-    }
-
-    .secondlayout-sidewalk {
-        font-size: var(--textS);
-    } 
+input[type="color"] {
+    inline-size: 30px;
+    block-size: 30px;
+    border-radius: 40%;
 }
 
-@media (width<450px) {
-    .mainlayout-subway {
-        font-size: calc(var(--textS)*0.4);
-    }
-
-    .secondlayout-subway {
-        font-size: calc(var(--textS)*0.3);
-    }
-
-    .mainlayout-billboard {
-        font-size: calc(var(--textM)*0.65);
-    }
-
-    .secondlayout-billboard {
-        font-size: calc(var(--textM)*0.25);
-    }
-
-    .mainlayout-sidewalk {
-        font-size: calc(var(--textS)*0.75);
-    }
-
-    .secondlayout-sidewalk {
-        font-size: calc(var(--textS)*0.4);
-    }
-} */
+input[type="text"] {
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    padding: calc(var(--spaceS)*0.2);
+}
