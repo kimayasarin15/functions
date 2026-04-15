@@ -116,6 +116,7 @@ secondaryColor.addEventListener('input', () => {
 // test
 
 // my variable for my input - my variable for container is already defined in preview3
+// this works on my laptop but not on other devices - need to fix
 const mainImage = document.getElementById('imageInput');
 
 mainImage.addEventListener('change', () => {
@@ -216,3 +217,12 @@ modeImage.addEventListener('click', () => {
     modeText.classList.remove('active');
 });
 
+
+// resize image control - need to fix this come back to it 
+
+// const imageSize = document.querySelector('#size');
+
+// imageSize.addEventListener('input', () => {
+//     imageContainer.style.width = imageSize.value;
+//     imageContainer.style.height = imageSize.value;
+// });

@@ -263,6 +263,7 @@ couldn't figure out container queries but will come back to that */
 }
 
 
+/* need to make the images bigger on mobile? */
 @media (width<950px) {
     .grid {
     display: flex;
