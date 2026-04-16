@@ -18,9 +18,12 @@
     src: url("fonts/Ayer-Regular-Trial.otf") format("opentype");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
 :root {
     font-size: 100%;
-    
+
+    --main-font: "Geist", sans-serif;
     --font-family1: "PP Editorial New";
     --font-family2: "Ayer-Regular-Trial";
     --font-family3: "ABC Diatype Mono Condensed";
@@ -53,6 +56,13 @@ body {
 
 p {
     padding-block-end: var(--spaceS);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 h1 {
@@ -89,11 +99,20 @@ a {
 }
 
 #main-form {
-    width: 20%;            
-    flex-shrink: 0;          
+    width: 25%;            
+    flex-shrink: 0;  
+    padding: var(--spaceS);
+    border-radius: 5px;
+    background-color: #E6E6E6;   
+    font-family: var(--main-font);
+    font-weight: 200;
 }
 #image-form {
     width: 70%;
+}
+
+label {
+    padding-block-end: var(--spaceS);
 }
 
 .style-1 {
@@ -117,8 +136,8 @@ button {
     color: var(--dark);
     padding: calc(var(--spaceS)*0.4);
     border-radius: 3px;
-    border-style: solid;
-    border-width: 0.8px;
+    /* border-style: solid;
+    border-width: 0.8px; */
 }
 
 
@@ -264,6 +283,14 @@ couldn't figure out container queries but will come back to that */
 
 
 /* need to make the images bigger on mobile? */
+
+/* @media (width<1200px) {
+    body {
+        font-size: calc(var(--textS)*0.9);
+    }
+} */
+
+
 @media (width<950px) {
     .grid {
     display: flex;
@@ -275,16 +302,26 @@ couldn't figure out container queries but will come back to that */
     }
     #image-form {
     width: 100%;
+    position: sticky;   
+    top: 10px;
     }
     h1 {
     font-size: var(--textM);
     }  
+    header {
+    display: flex;
+    flex-direction: column;
+    }
+    body {
+    font-size: calc(var(--textS)*1.2);
+    }
 
 }
 
 .download-button {
     padding-block-start: var(--spaceL);
 }
+
 
 /* https://rebeccamdeprey.com/blog/styling-the-html-color-input
 I found this article to help style my input color */
@@ -301,3 +338,5 @@ input[type="text"] {
     border-width: 0.8px;
     padding: calc(var(--spaceS)*0.2);
 }
+
+

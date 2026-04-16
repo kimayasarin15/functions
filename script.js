@@ -215,6 +215,7 @@ modeImage.addEventListener('click', () => {
     secondText.style.display = 'none';
     modeImage.classList.add('active');
     modeText.classList.remove('active');
+    imageContainer.style.display = 'block';
 });
 
 
