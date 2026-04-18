@@ -1,9 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+
 @font-face {
     font-family: "PP Editorial New";
     src: url("fonts/PPEditorialNew-Ultralight.otf") format("opentype");
 }
 
-@font-face {
+/* @font-face {
     font-family: "ABC Diatype Mono Condensed";
     src: url("fonts/ABCDiatypeMonoCondensed-Thin-Trial.woff2") format("woff2");
 }
@@ -16,18 +25,19 @@
 @font-face {
     font-family: "Ayer-Regular-Trial";
     src: url("fonts/Ayer-Regular-Trial.otf") format("opentype");
-}
+} */
 
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
 
 :root {
     font-size: 100%;
 
     --main-font: "Geist", sans-serif;
-    --font-family1: "PP Editorial New";
-    --font-family2: "Ayer-Regular-Trial";
-    --font-family3: "ABC Diatype Mono Condensed";
-    --font-family4: "ABC Favorit Edu";
+    --second-font: "PP Editorial New";
+    --font-family1: "Playfair Display", serif;
+    --font-family2: "Limelight", sans-serif;
+    --font-family3: "IBM Plex Mono", monospace;
+    --font-family4:  "DM Sans", sans-serif;
 
     --light: #FFFFFF;
     --dark: #121212;
@@ -63,6 +73,7 @@ header {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
+    font-family: var(--second-font);
 }
 
 h1 {
@@ -117,6 +128,7 @@ label {
 
 .style-1 {
     font-family: var(--font-family1);
+    font-weight: 400;
 }
 
 .style-2{
@@ -125,10 +137,13 @@ label {
 
 .style-3{
     font-family: var(--font-family3);
+    font-weight: 100;
+    font-style: normal;
 }
 
 .style-4{
     font-family: var(--font-family4);
+    font-weight: 600;
 }
 
 button {
@@ -235,37 +250,37 @@ couldn't figure out container queries but will come back to that */
 .mainlayout-subway {
     top: 28%; 
     left: 45.5%;
-    font-size: clamp(0.4rem, 1.2vw, 1.8rem);
+    font-size: clamp(0.35rem, 1vw, 1.8rem);
 }
 
 .secondlayout-subway {
     top: 40%;
     left: 45.5%;
-    font-size: clamp(0.3rem, 0.85vw, 0.9rem);
+    font-size: clamp(0.25rem, 0.85vw, 0.9rem);
 }
 
 .mainlayout-billboard {
     top: 35%; 
     left: 32%;
-    font-size: clamp(1rem, 4vw, 3.2rem);
+    font-size: clamp(1rem, 3.5vw, 3.2rem);
 }
 
 .secondlayout-billboard {
     top: 55%;
     left: 55%;
-    font-size: clamp(0.5rem, 2vw, 1.6rem);
+    font-size: clamp(0.5rem, 1.4vw, 1.6rem);
 }
 
 .mainlayout-sidewalk {
     top: 25%; 
     left: 41%;
-    font-size: clamp(0.8rem, 2.5vw, 2rem);
+    font-size: clamp(0.8rem, 1.8vw, 2rem);
 }
 
 .secondlayout-sidewalk {
     top: 70%;
     left: 41%;
-    font-size: clamp(0.5rem, 1.5vw, 1.2rem);
+    font-size: clamp(0.5rem, 1vw, 1.2rem);
 }
 
 
@@ -338,5 +353,4 @@ input[type="text"] {
     border-width: 0.8px;
     padding: calc(var(--spaceS)*0.2);
 }
-
 

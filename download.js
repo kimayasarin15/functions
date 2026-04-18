@@ -37,7 +37,7 @@
 // 	})
 
 
-// come back to this
+// works for desktop
 import { toPng } from 'https://unpkg.com/html-to-image?module'
 
 const download = document.querySelector('#download');
@@ -51,3 +51,4 @@ download.addEventListener('click', () => {
             link.click();
         });
 });
+
