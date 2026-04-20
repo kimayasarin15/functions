@@ -288,14 +288,23 @@ couldn't figure out container queries but will come back to that */
     display: none;
 }
 
+.share-button {
+    display: none;
+}
+#share, #download {
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: var(--dark);
+    width: 100%;
+    text-align: center;
+}
+/* responsive */
 
-/* need to make the images bigger on mobile? */
-
-/* @media (width<1200px) {
+@media (width<1200px) {
     body {
-        font-size: calc(var(--textS)*0.9);
+        font-size: calc(var(--textS)*0.95);
     }
-} */
+}
 
 
 @media (width<950px) {
@@ -322,6 +331,12 @@ couldn't figure out container queries but will come back to that */
     }
     body {
     font-size: calc(var(--textS)*1.2);
+    }
+    .share-button {
+    display: block;
+    }
+    .download-button {
+    display: none;
     }
 }
 /* 'zoom' in under 600px */
