@@ -46,7 +46,7 @@ download.addEventListener('click', () => {
     toPng(document.querySelector('#posterbox'))
         .then((dataUrl) => {
             const link = document.createElement('a');
-            link.download = 'image.png';
+            link.download = 'nyc-mockup.png';
             link.href = dataUrl;
             link.click();
         });

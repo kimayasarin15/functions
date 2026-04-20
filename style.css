@@ -93,12 +93,6 @@ ul li {
     padding-block-start: var(--spaceM);
 }
 
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 a {
     text-decoration: underline;
 }
@@ -118,6 +112,7 @@ a {
     font-family: var(--main-font);
     font-weight: 200;
 }
+
 #image-form {
     width: 70%;
 }
@@ -151,10 +146,7 @@ button {
     color: var(--dark);
     padding: calc(var(--spaceS)*0.4);
     border-radius: 3px;
-    /* border-style: solid;
-    border-width: 0.8px; */
 }
-
 
 .active {
     background-color: var(--dark);
@@ -311,6 +303,7 @@ couldn't figure out container queries but will come back to that */
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
+    gap: var(--spaceS);
     }
     #main-form {
     width: 100%;                      
@@ -330,13 +323,16 @@ couldn't figure out container queries but will come back to that */
     body {
     font-size: calc(var(--textS)*1.2);
     }
-
 }
-
-.download-button {
-    padding-block-start: var(--spaceL);
+/* 'zoom' in under 600px */
+@media (width < 600px) {
+    #posterbox {
+        transform: scale(1.6);
+    }
+    #image-form {
+        overflow: hidden;
+    }
 }
-
 
 /* https://rebeccamdeprey.com/blog/styling-the-html-color-input
 I found this article to help style my input color */
