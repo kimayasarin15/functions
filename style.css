@@ -43,7 +43,7 @@
     --dark: #121212;
     --color: #FF4848;
     --color2:#442FFF;
-    --color3: #726D31;
+    --color3: #E6E6E6;
 
     --lineheight: 100%;
     
@@ -109,7 +109,7 @@ a {
     flex-shrink: 0;  
     padding: var(--spaceS);
     border-radius: 5px;
-    background-color: #E6E6E6;   
+    background-color: var(--color3);
     font-family: var(--main-font);
     font-weight: 200;
 }
@@ -400,4 +400,3 @@ input[type="text"] {
     padding: calc(var(--spaceS)*0.2);
     width: 100%;
 }
-
