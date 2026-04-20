@@ -242,37 +242,37 @@ couldn't figure out container queries but will come back to that */
 .mainlayout-subway {
     top: 28%; 
     left: 45.5%;
-    font-size: clamp(0.35rem, 1vw, 1.8rem);
+    font-size: clamp(0.25rem, 1vw, 1.8rem);
 }
 
 .secondlayout-subway {
     top: 40%;
     left: 45.5%;
-    font-size: clamp(0.25rem, 0.85vw, 0.9rem);
+    font-size: clamp(0.15rem, 0.85vw, 0.9rem);
 }
 
 .mainlayout-billboard {
     top: 35%; 
     left: 32%;
-    font-size: clamp(1rem, 3.5vw, 3.2rem);
+    font-size: clamp(0.9rem, 3.5vw, 3.2rem);
 }
 
 .secondlayout-billboard {
     top: 55%;
     left: 55%;
-    font-size: clamp(0.5rem, 1.4vw, 1.6rem);
+    font-size: clamp(0.35rem, 1.4vw, 1.6rem);
 }
 
 .mainlayout-sidewalk {
     top: 25%; 
     left: 41%;
-    font-size: clamp(0.8rem, 1.8vw, 2rem);
+    font-size: clamp(0.5rem, 1.8vw, 2rem);
 }
 
 .secondlayout-sidewalk {
     top: 70%;
     left: 41%;
-    font-size: clamp(0.5rem, 1vw, 1.2rem);
+    font-size: clamp(0.35rem, 1vw, 1.2rem);
 }
 
 
