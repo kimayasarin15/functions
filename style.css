@@ -101,6 +101,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 #main-form {
@@ -115,6 +116,8 @@ a {
 
 #image-form {
     width: 70%;
+    position: sticky;   
+    top: 10px;
 }
 
 label {
@@ -146,6 +149,7 @@ button {
     color: var(--dark);
     padding: calc(var(--spaceS)*0.4);
     border-radius: 3px;
+    width: 100%;
 }
 
 .active {
@@ -153,6 +157,7 @@ button {
     color: var(--light);
     padding: calc(var(--spaceS)*0.4);
     border-radius: 3px;
+    width: 100%;
 }
 
 section {
@@ -303,6 +308,27 @@ couldn't figure out container queries but will come back to that */
     width: 100%;
     text-align: center;
 }
+
+#download:hover {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.button-flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spaceS);
+    text-align: center;
+}
+
+.button-flex-style {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spaceS);
+    text-align: center;
+}
 /* responsive */
 
 @media (width<1200px) {
@@ -352,6 +378,9 @@ couldn't figure out container queries but will come back to that */
     #image-form {
         overflow: hidden;
     }
+    #button-flex-first {
+        flex-direction: column;
+    }
 }
 
 /* https://rebeccamdeprey.com/blog/styling-the-html-color-input
@@ -360,7 +389,8 @@ I found this article to help style my input color */
 input[type="color"] {
     inline-size: 30px;
     block-size: 30px;
-    border-radius: 40%;
+    border-radius: 100%;
+
 }
 
 input[type="text"] {
@@ -368,5 +398,6 @@ input[type="text"] {
     border-radius: 3px;
     border-width: 0.8px;
     padding: calc(var(--spaceS)*0.2);
+    width: 100%;
 }
 

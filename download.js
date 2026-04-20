@@ -37,7 +37,7 @@
 // 	})
 
 
-// works for desktop
+// desktop download
 import { toPng } from 'https://unpkg.com/html-to-image?module'
 
 const download = document.querySelector('#download');
@@ -50,5 +50,17 @@ download.addEventListener('click', () => {
             link.href = dataUrl;
             link.click();
         });
+});
+
+
+// mobile share
+const share = document.querySelector('#share'); 
+
+download.addEventListener('click', () => {
+    toPng(document.querySelector('#posterbox'))
+        .then((dataUrl) => {
+            // something else in here 
+        });
+
 });
 

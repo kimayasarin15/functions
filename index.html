@@ -17,14 +17,18 @@
         <section id="main-form">
             <section>
                 <p>Choose your mockup</p>
+                <section class="button-flex" id="button-flex-first">
                 <button id="image-1" class="active">Subway</button>
                 <button id="image-2">Billboard</button>
                 <button id="image-3">Sidewalk</button>
+                </section>
             </section>
             <section>
                 <p>Choose your method</p>
+                <section class="button-flex">
                 <button id="image-mode">Image</button>
                 <button id="text-mode">Text</button>
+                </section>
             </section>
             <section id="image-controls">    
                 <section>             
@@ -39,7 +43,7 @@
             </section>
             <section id="text-controls">
             <form>
-                    <section>
+                    <section class="input-flex">
                         <label for="text">Add your primary text</label>
                         <br>
                         <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/maxlength added maxlength to my inputs -->
@@ -52,7 +56,7 @@
                         <input type="color" id="primary-color" name="color" value="#000000"/>
                     </section>
                         <section>
-                        <label for="text">Add your secondary tex:</label>
+                        <label for="text">Add your secondary text</label>
                         <br>
                         <input id="secondary-text" name="text" placeholder="Type here" required type="text" maxlength="15">
                     </section>
@@ -64,10 +68,12 @@
             </form>
             <section>
                     <p>Choose your style</p>
+                    <section class="button-flex-style">
                     <button id="style-1" class="active">Editorial</button>
                     <button id="style-2">Vintage</button>
                     <button id="style-3">Scientific</button>
                     <button id="style-4">Bold</button>
+                    </section>
             </section>
             <!-- <section>
                     <button type="reset" id="reset">Reset</button> Maybe I don't need this 
