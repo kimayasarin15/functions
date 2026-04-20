@@ -54,13 +54,29 @@ download.addEventListener('click', () => {
 
 
 // mobile share
-const share = document.querySelector('#share'); 
+// const share = document.querySelector('#share'); 
 
-download.addEventListener('click', () => {
-    toPng(document.querySelector('#posterbox'))
-        .then((dataUrl) => {
-            // something else in here 
-        });
+// download.addEventListener('click', () => {
+//     toPng(document.querySelector('#posterbox'))
+//         .then((dataUrl) => {
+            
+            
 
-});
+//     if (navigator.canShare({ files })) {
+//         try {
+//             await navigator.share({
+//                 files,
+//                 title: "Images",
+//                 text: "Beautiful images",
+//             });
+//         } catch (error) {
+//             console.error(error);
+//         }
+//     } else {
+//         output.textContent = `System doesn't support sharing files.`;
+//     }
+
+//         }); 
+
+// }); 
 
