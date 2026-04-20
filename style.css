@@ -291,6 +291,11 @@ couldn't figure out container queries but will come back to that */
 .share-button {
     display: none;
 }
+
+.download-button {
+    display: block;
+}
+
 #share, #download {
     border-style: solid;
     border-width: 0.5px;
