@@ -60,15 +60,16 @@ download.addEventListener('click', () => {
 // download.addEventListener('click', () => {
 //     toPng(document.querySelector('#posterbox'))
 //         .then((dataUrl) => {
-            
-            
 
-//     if (navigator.canShare({ files })) {
+//         const blob = await (await fetch(dataUrl)).blob();
+//         const file = new File([blob], 'nyc-mockup.png', { type: blob.type });
+    
+//         if (navigator.canShare({ files })) {
 //         try {
 //             await navigator.share({
 //                 files,
-//                 title: "Images",
-//                 text: "Beautiful images",
+//                 title: "Nyc-mockup",
+//                 text: "mockup images",
 //             });
 //         } catch (error) {
 //             console.error(error);
@@ -77,7 +78,34 @@ download.addEventListener('click', () => {
 //         output.textContent = `System doesn't support sharing files.`;
 //     }
 
-//         }); 
+//      }); 
 
 // }); 
 
+
+
+
+            
+
+    // if (navigator.canShare({ files })) {
+    //     try {
+    //         await navigator.share({
+    //             files,
+    //             title: "Images",
+    //             text: "Beautiful images",
+    //         });
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // } else {
+    //     output.textContent = `System doesn't support sharing files.`;
+    // }
+
+// const base64url = "data:image/octet-stream;base64,/9j/4AAQSkZ...."
+// const blob = await (await fetch(dataUrl)).blob();
+// const file = new File([blob], 'fileName.png', { type: blob.type });
+// navigator.share({
+//   title: 'Hello',
+//   text: 'Check out this image!',
+//   files: [file],
+// })

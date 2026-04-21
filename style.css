@@ -220,10 +220,11 @@ section {
 
 /* my image sizes - come back to do container query units */
 .preview3-box-subway {
-    top: 24.5%;
-    left: 43.9%;
-    width: 13.5%;
-    height: 39.5%;     
+    inset-block-start: 24.5%;
+    inset-inline-start: 43.9%;
+    inset-inline-end:  42.6%;
+    inset-block-end: 36%;
+
 }
 
 .preview3-box-billboard {
@@ -234,11 +235,11 @@ section {
 }
 
 .preview3-box-sidewalk {
-    top: 23%;
-    left: 39.5%;
-    width: 23%;
-    height: 54.2%;      
-}
+    inset-block-start: 23%;
+    inset-inline-start: 39.5%;
+    inset-inline-end: 37.5%;
+    inset-block-end: 22.8%;     
+    }
 
 
 /* my layout positions and text sizes */
