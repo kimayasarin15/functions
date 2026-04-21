@@ -246,38 +246,38 @@ section {
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp used clamp for the font size so it resizes better than manually doing it with media queries
 couldn't figure out container queries but will come back to that */
 .mainlayout-subway {
-    top: 28%; 
-    left: 28%;
+    inset-block-start: 28%; 
+    inset-inline-start: 45.5%;
     font-size: clamp(0.25rem, 1vw, 1.8rem);
 }
 
 .secondlayout-subway {
-    top: 40%;
-    left: 45.5%;
+    inset-block-start: 40%;
+    inset-inline-start: 45.5%;
     font-size: clamp(0.15rem, 0.85vw, 0.9rem);
 }
 
 .mainlayout-billboard {
-    top: 35%; 
-    left: 29%;
+    inset-block-start: 35%; 
+    inset-inline-start: 29%;
     font-size: clamp(0.9rem, 3.5vw, 3.2rem);
 }
 
 .secondlayout-billboard {
-    top: 55%;
-    left: 50%;
+    inset-block-start: 55%;
+    inset-inline-start: 50%;
     font-size: clamp(0.35rem, 1.4vw, 1.6rem);
 }
 
 .mainlayout-sidewalk {
-    top: 25%; 
-    left: 41%;
+    inset-block-start: 25%; 
+    inset-inline-start: 41%;
     font-size: clamp(0.5rem, 1.8vw, 2rem);
 }
 
 .secondlayout-sidewalk {
-    top: 70%;
-    left: 41%;
+    inset-block-start: 70%;
+    inset-inline-start: 41%;
     font-size: clamp(0.35rem, 1vw, 1.2rem);
 }
 
@@ -422,43 +422,43 @@ couldn't figure out container queries but will come back to that */
 
     .preview3-box-sidewalk {
         inset-block-start: 23%;
-        inset-inline-start: 27.2%;
-        inset-inline-end: 22.8%;
+        inset-inline-start: 26.5%;
+        inset-inline-end: 23.5%;
         inset-block-end: 22.8%;    
     }   
     .mainlayout-subway {
-        top: 28%; 
-        left: 40%;
+        inset-block-start: 28%; 
+        inset-inline-start: 40%;
         font-size: clamp(0.55rem, 1vw, 1.8rem);
     }
 
     .secondlayout-subway {
-        top: 40%;
-        left: 40%;
+        inset-block-start: 40%;
+        inset-inline-start: 40%;
         font-size: clamp(0.4rem, 0.85vw, 0.9rem);
     }
 
     .mainlayout-billboard {
-        top: 35%; 
-        left: 8%;
+        inset-block-start: 35%; 
+        inset-inline-start: 8%;
         font-size: clamp(1.5rem, 3.5vw, 3.2rem);
     }
 
     .secondlayout-billboard {
-        top: 55%;
-        left: 60%;
+        inset-block-start: 55%;
+        inset-inline-start: 60%;
         font-size: clamp(0.6rem, 1.4vw, 1.6rem);
     }
 
     .mainlayout-sidewalk {
-        top: 25%; 
-        left: 30%;
+        inset-block-start: 25%; 
+        inset-inline-start: 30%;
         font-size: clamp(0.9rem, 1.8vw, 2rem);
     }
 
     .secondlayout-sidewalk {
-        top: 70%;
-        left: 30%;
+        inset-block-start: 70%;
+        inset-inline-start: 30%;
         font-size: clamp(0.6rem, 1vw, 1.2rem);
     }
 
