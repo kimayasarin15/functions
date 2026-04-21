@@ -246,7 +246,7 @@ section {
 couldn't figure out container queries but will come back to that */
 .mainlayout-subway {
     top: 28%; 
-    left: 45.5%;
+    left: 28%;
     font-size: clamp(0.25rem, 1vw, 1.8rem);
 }
 
@@ -258,13 +258,13 @@ couldn't figure out container queries but will come back to that */
 
 .mainlayout-billboard {
     top: 35%; 
-    left: 32%;
+    left: 29%;
     font-size: clamp(0.9rem, 3.5vw, 3.2rem);
 }
 
 .secondlayout-billboard {
     top: 55%;
-    left: 55%;
+    left: 50%;
     font-size: clamp(0.35rem, 1.4vw, 1.6rem);
 }
 
@@ -323,7 +323,7 @@ couldn't figure out container queries but will come back to that */
 }
 
 #button-flex-first {
-        flex-direction: column;
+    flex-direction: column;
 }
 
 .button-flex-style {
@@ -425,9 +425,45 @@ couldn't figure out container queries but will come back to that */
         width: 50%;
         height: 54.2%;      
     }   
+    .mainlayout-subway {
+    top: 28%; 
+    left: 40%;
+    font-size: clamp(0.55rem, 1vw, 1.8rem);
 }
 
-@media (width < 400px) {
+    .secondlayout-subway {
+        top: 40%;
+        left: 40%;
+        font-size: clamp(0.4rem, 0.85vw, 0.9rem);
+    }
+
+    .mainlayout-billboard {
+        top: 35%; 
+        left: 8%;
+        font-size: clamp(1.5rem, 3.5vw, 3.2rem);
+    }
+
+    .secondlayout-billboard {
+        top: 55%;
+        left: 60%;
+        font-size: clamp(0.6rem, 1.4vw, 1.6rem);
+    }
+
+    .mainlayout-sidewalk {
+        top: 25%; 
+        left: 30%;
+        font-size: clamp(0.9rem, 1.8vw, 2rem);
+    }
+
+    .secondlayout-sidewalk {
+        top: 70%;
+        left: 30%;
+        font-size: clamp(0.6rem, 1vw, 1.2rem);
+    }
+
+}
+
+/* @media (width < 400px) {
     .preview3-box-subway {
         top: 24.5%;
         left: 36%;
@@ -449,7 +485,7 @@ couldn't figure out container queries but will come back to that */
         height: 54.2%;      
     }  
 
-}
+} */
 
 /* need to center my billboard on mobile */
 
