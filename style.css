@@ -513,7 +513,7 @@ input[type="text"] {
     border-radius: 3px;
     border-width: 0.8px;
     padding: calc(var(--spaceS)*0.2);
-    width: 100%;
+    width: 1000%;
 }
 
 input[type="file"] {
