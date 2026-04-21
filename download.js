@@ -37,6 +37,7 @@
 // 	})
 
 
+
 // desktop download
 import { toPng } from 'https://unpkg.com/html-to-image?module'
 
@@ -64,30 +65,34 @@ download.addEventListener('click', () => {
 
 // button works but image is blank on mobile need to fix 
 
+await toPng(document.querySelector('#posterbox'))
+
 const share = document.querySelector('#share'); 
 
-share.addEventListener('click', () => {
-    toPng(document.querySelector('#posterbox'))
-        .then(async (dataUrl) => {
+share.addEventListener('click', async() => {
+    // Safari renders blank on first `toPng`, so burn the first one (from Michael)
+    await toPng(document.querySelector('#posterbox'))
+        toPng(document.querySelector('#posterbox'))
+            .then(async (dataUrl) => {
 
-        const blob = await (await fetch(dataUrl)).blob();
-        const file = new File([blob], 'nyc-mockup.png', { type: blob.type });
-    
-        if (navigator.canShare({ files: [file], })) {
-        try {
-            await navigator.share({
-                files: [file],
-                title: "nyc-mockup",
-                text: "mockup images",
-            });
-        } catch (error) {
-            console.error(error);
-        }
-        } else {
-            console.log("Cannot share file");
-        }
+            const blob = await (await fetch(dataUrl)).blob();
+            const file = new File([blob], 'nyc-mockup.png', { type: blob.type });
+        
+            if (navigator.canShare({ files: [file], })) {
+            try {
+                await navigator.share({
+                    files: [file],
+                    title: "nyc-mockup",
+                    text: "mockup images",
+                });
+            } catch (error) {
+                console.error(error);
+            }
+            } else {
+                console.log("Cannot share file");
+            }
 
-     }); 
+        }); 
 
 }); 
 
