@@ -55,51 +55,44 @@ download.addEventListener('click', () => {
 
 // Tried to get Claude to explain this: https://claude.ai/share/d22f5590-0d38-45f4-b02a-d079811a46b2
 // mobile share
-// const share = document.querySelector('#share'); 
 
-// download.addEventListener('click', () => {
-//     toPng(document.querySelector('#posterbox'))
-//         .then((dataUrl) => {
+// Trouble shooting with console + Claude https://claude.ai/share/1aa88e9d-d1c2-4805-834e-3fe694e606f1
+// I had only created a file while it was expecting multiple files
 
-//         const blob = await (await fetch(dataUrl)).blob();
-//         const file = new File([blob], 'nyc-mockup.png', { type: blob.type });
+// Putting my other references here too for the future https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
+// https://stackoverflow.com/questions/61250048/how-to-share-a-single-base64-url-image-via-the-web-share-api/63948598#63948598
+
+const share = document.querySelector('#share'); 
+
+share.addEventListener('click', () => {
+    toPng(document.querySelector('#posterbox'))
+        .then(async (dataUrl) => {
+
+        const blob = await (await fetch(dataUrl)).blob();
+        const file = new File([blob], 'nyc-mockup.png', { type: blob.type });
     
-//         if (navigator.canShare({ files })) {
-//         try {
-//             await navigator.share({
-//                 files,
-//                 title: "Nyc-mockup",
-//                 text: "mockup images",
-//             });
-//         } catch (error) {
-//             console.error(error);
-//         }
-//     } else {
-//         output.textContent = `System doesn't support sharing files.`;
-//     }
+        if (navigator.canShare({ files: [file], })) {
+        try {
+            await navigator.share({
+                files: [file],
+                title: "nyc-mockup",
+                text: "mockup images",
+            });
+        } catch (error) {
+            console.error(error);
+        }
+        } else {
+            console.log("Cannot share file");
+        }
 
-//      }); 
+     }); 
 
-// }); 
-
-
+}); 
 
 
-            
 
-    // if (navigator.canShare({ files })) {
-    //     try {
-    //         await navigator.share({
-    //             files,
-    //             title: "Images",
-    //             text: "Beautiful images",
-    //         });
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // } else {
-    //     output.textContent = `System doesn't support sharing files.`;
-    // }
+
+// from SO:
 
 // const base64url = "data:image/octet-stream;base64,/9j/4AAQSkZ...."
 // const blob = await (await fetch(dataUrl)).blob();
