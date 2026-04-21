@@ -12,23 +12,6 @@
     src: url("fonts/PPEditorialNew-Ultralight.otf") format("opentype");
 }
 
-/* @font-face {
-    font-family: "ABC Diatype Mono Condensed";
-    src: url("fonts/ABCDiatypeMonoCondensed-Thin-Trial.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "ABC Favorit Edu";
-    src: url("fonts/ABCFavoritEdu-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Ayer-Regular-Trial";
-    src: url("fonts/Ayer-Regular-Trial.otf") format("opentype");
-} */
-
-
-
 :root {
     font-size: 100%;
 
@@ -60,8 +43,6 @@ body {
     font-family: var(--font-family1);
     padding: var(--spaceL);
     font-size: calc(var(--textS)*1.2);
-    /* text-transform: uppercase; */
-    /* block-size: 100vh; */
 }
 
 p {
@@ -192,10 +173,10 @@ section {
     z-index: 2;
 }
 
-/* need to come back to crop these correctly but the images show on top! */
+
 /* https://claude.ai/share/a4934733-1cee-4a6c-b86a-29e7a849811c I asked for help for different appraoches - it suggested clip-path which I will look into */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path I copied the clip-path polygon from MDN and am trying to do it with trial and error */
-/* need to figure out how to: scale down image + add different clip paths for different images */
+/* didn't end up using the above - did object fit: cover and inset but left it in for reference */
 
 #preview3-box img {
     z-index: 1;
@@ -204,13 +185,6 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
-    /* I did this with A LOT of trial and error - values for me to remember / edit later
-    44:left
-    24.5: top
-    57.5: right
-    64: bottom */
-    /* clip-path: polygon(44% 24.5%, 57.5% 24.5%, 57.5% 64%, 44% 64%); */
 }
 
 #preview3-box {
@@ -350,41 +324,41 @@ button:hover {
 
 @media (width<950px) {
     .grid {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    gap: var(--spaceS);
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        gap: var(--spaceS);
     }
 
     #main-form {
-    width: 100%;                      
+        width: 100%;                      
     }
 
     #image-form {
-    width: 100%;
-    position: sticky;   
-    top: 10px;
+        width: 100%;
+        position: sticky;   
+        top: 10px;
     }
 
     h1 {
-    font-size: var(--textM);
+        font-size: var(--textM);
     }  
 
     header {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
 
     body {
-    font-size: calc(var(--textS)*1.2);
+        font-size: calc(var(--textS)*1.2);
     }
 
     .share-button {
-    display: block;
+        display: block;
     }
 
     .download-button {
-    display: none;
+        display: none;
     }
 }
 
@@ -469,34 +443,6 @@ button:hover {
     }
 
 }
-
-/* @media (width < 400px) {
-    .preview3-box-subway {
-        top: 24.5%;
-        left: 36%;
-        width: 31%;
-        height: 39.6%;     
-    }
-
-    .preview3-box-billboard {
-        top: 30.7%;
-        left: 1.5%;
-        width: 98%;
-        height: 33%;     
-    }
-
-    .preview3-box-sidewalk {
-        top: 23%;
-        left: 27.5%;
-        width: 49.5%;
-        height: 54.2%;      
-    }  
-
-} */
-
-/* need to center my billboard on mobile */
-
-
 
 /* https://rebeccamdeprey.com/blog/styling-the-html-color-input
 I found this article to help style my input color */
