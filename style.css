@@ -421,16 +421,16 @@ couldn't figure out container queries but will come back to that */
     }
 
     .preview3-box-sidewalk {
-        top: 23%;
-        left: 27.2%;
-        width: 50%;
-        height: 54.2%;      
+        inset-block-start: 23%;
+        inset-inline-start: 27.2%;
+        inset-inline-end: 22.8%;
+        inset-block-end: 22.8%;    
     }   
     .mainlayout-subway {
-    top: 28%; 
-    left: 40%;
-    font-size: clamp(0.55rem, 1vw, 1.8rem);
-}
+        top: 28%; 
+        left: 40%;
+        font-size: clamp(0.55rem, 1vw, 1.8rem);
+    }
 
     .secondlayout-subway {
         top: 40%;
