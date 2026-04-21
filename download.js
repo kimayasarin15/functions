@@ -83,7 +83,6 @@ share.addEventListener('click', async() => {
                 await navigator.share({
                     files: [file],
                     title: "nyc-mockup",
-                    text: "mockup images",
                 });
             } catch (error) {
                 console.error(error);
