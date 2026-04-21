@@ -228,16 +228,16 @@ section {
 }
 
 .preview3-box-billboard {
-    top: 30.7%;
-    left: 27.2%;
-    width: 45.8%;
-    height: 32.8%;     
+    inset-block-start: 30.7%;
+    inset-inline-start: 27%;
+    inset-inline-end: 27%;
+    inset-block-end: 36.5%;
 }
 
 .preview3-box-sidewalk {
     inset-block-start: 23%;
     inset-inline-start: 39.5%;
-    inset-inline-end: 37.5%;
+    inset-inline-end: 37.4%;
     inset-block-end: 22.8%;     
     }
 
@@ -407,10 +407,10 @@ couldn't figure out container queries but will come back to that */
     }
 
     .preview3-box-subway {
-        top: 24.5%;
-        left: 36%;
-        width: 31%;
-        height: 39.6%;     
+        inset-block-start: 24.5%;
+        inset-inline-start: 36%;
+        inset-inline-end: 33%;
+        inset-block-end: 35.9%;   
     }
 
     .preview3-box-billboard {
