@@ -62,6 +62,8 @@ download.addEventListener('click', () => {
 // Putting my other references here too for the future https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
 // https://stackoverflow.com/questions/61250048/how-to-share-a-single-base64-url-image-via-the-web-share-api/63948598#63948598
 
+// button works but image is blank on mobile need to fix 
+
 const share = document.querySelector('#share'); 
 
 share.addEventListener('click', () => {
