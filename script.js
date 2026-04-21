@@ -224,6 +224,7 @@ modeImage.addEventListener('click', () => {
 // const imageSize = document.querySelector('#size');
 
 // imageSize.addEventListener('input', () => {
-//     imageContainer.style.width = imageSize.value;
-//     imageContainer.style.height = imageSize.value;
+//     // imageContainer.style.width = `${imageSize.value}%`;
+//     // imageContainer.style.height = `${imageSize.value}%`;
+//     imageContainer.style.transform = `scale(${imageSize.value})`;
 // });

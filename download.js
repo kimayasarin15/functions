@@ -53,6 +53,7 @@ download.addEventListener('click', () => {
 });
 
 
+// Tried to get Claude to explain this: https://claude.ai/share/d22f5590-0d38-45f4-b02a-d079811a46b2
 // mobile share
 // const share = document.querySelector('#share'); 
 
