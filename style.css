@@ -322,6 +322,10 @@ couldn't figure out container queries but will come back to that */
     text-align: center;
 }
 
+#button-flex-first {
+        flex-direction: column;
+}
+
 .button-flex-style {
     width: 100%;
     display: flex;
@@ -345,33 +349,41 @@ couldn't figure out container queries but will come back to that */
     justify-content: space-between;
     gap: var(--spaceS);
     }
+
     #main-form {
     width: 100%;                      
     }
+
     #image-form {
     width: 100%;
     position: sticky;   
     top: 10px;
     }
+
     h1 {
     font-size: var(--textM);
     }  
+
     header {
     display: flex;
     flex-direction: column;
     }
+
     body {
     font-size: calc(var(--textS)*1.2);
     }
+
     .share-button {
     display: block;
     }
+
     .download-button {
     display: none;
     }
 }
-/* 'zoom' in under 600px */
+
 @media (width < 550px) {
+
     #image-form {
         width: 100%;
         aspect-ratio: 4 / 5;
@@ -401,6 +413,29 @@ couldn't figure out container queries but will come back to that */
     }
 
     .preview3-box-billboard {
+        top: 30.5%;
+        left: 0.8%;
+        width: 99%;
+        height: 33%;     
+    }
+
+    .preview3-box-sidewalk {
+        top: 23%;
+        left: 27.2%;
+        width: 50%;
+        height: 54.2%;      
+    }   
+}
+
+@media (width < 400px) {
+    .preview3-box-subway {
+        top: 24.5%;
+        left: 36%;
+        width: 31%;
+        height: 39.6%;     
+    }
+
+    .preview3-box-billboard {
         top: 30.7%;
         left: 1.5%;
         width: 98%;
@@ -412,7 +447,8 @@ couldn't figure out container queries but will come back to that */
         left: 27.5%;
         width: 49.5%;
         height: 54.2%;      
-    }   
+    }  
+
 }
 
 /* need to center my billboard on mobile */
