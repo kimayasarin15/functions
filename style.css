@@ -265,7 +265,7 @@ couldn't figure out container queries but will come back to that */
 
 .secondlayout-billboard {
     inset-block-start: 55%;
-    inset-inline-start: 50%;
+    inset-inline-start: 52%;
     font-size: clamp(0.35rem, 1.4vw, 1.6rem);
 }
 
@@ -283,7 +283,7 @@ couldn't figure out container queries but will come back to that */
 
 
 #image-controls {
-    display: none;
+    display: block;
 }
 
 #text-controls {
@@ -311,6 +311,11 @@ couldn't figure out container queries but will come back to that */
 }
 
 #download:hover {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+button:hover {
     background-color: var(--dark);
     color: var(--light);
 }
@@ -402,8 +407,9 @@ couldn't figure out container queries but will come back to that */
         object-fit: cover;
         display: block;
     }
-    #button-flex-first {
-        flex-direction: column;
+
+    button:hover {
+        transform: none;
     }
 
     .preview3-box-subway {
