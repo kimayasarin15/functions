@@ -313,8 +313,9 @@ button:hover {
     gap: var(--spaceS);
     text-align: center;
 }
-/* responsive */
 
+
+/* responsive */
 
 @media (width<950px) {
     .grid {
