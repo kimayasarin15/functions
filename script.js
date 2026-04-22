@@ -228,3 +228,4 @@ modeImage.addEventListener('click', () => {
 //     // imageContainer.style.height = `${imageSize.value}%`;
 //     imageContainer.style.transform = `scale(${imageSize.value})`;
 // });
+
