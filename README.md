@@ -1,7 +1,7 @@
 # Type & Interaction MPS CD Project 5: Functions
 
 ## Context
-My website started from a frustration that felt both personal and widely shared. As designers, clients only care about ‘what it looks like on a billboard.’  For a long time, the only serious option was Photoshop. And while Photoshop is a powerful tool, the process was always tedious, especially when having to make really small changes. It was designed for professional designers, not for anyone who just wants to try something out. More recently, AI tools have moved into this space, and while they seem like the obvious fix, they come with their own set of problems. You are not always getting what you imagined, and iterating toward it takes time, patience and money. 
+My website started from a frustration that felt both personal and widely shared amongst the design community. As designers, clients only care about ‘what it looks like on a billboard.’  For a long time, the only option was Photoshop. And while Photoshop is a powerful tool, the process was always tedious, especially when having to make really small changes. It was designed for professional designers, not for anyone who just wants to try something out. More recently, AI tools have moved into this space, and while they seem like the obvious fix, they come with their own set of problems. You are not always getting what you imagined, and iterating toward it takes time, patience and money. 
 
 ## Interface
 I created a simple browser-based tool that lets anyone, designer or not, place their own image or text onto a New York City subway ad, billboard, or sidewalk display. Being in New York, I choose three quintessential NYC mocks so users could feel what their work looked like in these spaces. 
