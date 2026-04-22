@@ -292,6 +292,12 @@ couldn't figure out container queries but will come back to that */
     display: none;
 }
 
+.share-button p {
+    padding-block-start: var(--spaceM);
+    font-size: calc(var(--textS)*0.9);
+
+}
+
 .download-button {
     display: block;
 }
