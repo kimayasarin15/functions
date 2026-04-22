@@ -24,9 +24,10 @@
 
     --light: #FFFFFF;
     --dark: #121212;
-    --color: #FF4848;
-    --color2:#442FFF;
-    --color3: #E9E9E9;
+    /* --color: #FF4848;
+    --color2:#442FFF; */
+    --lightgrey: #E9E9E9;
+    --darkgrey: #2C2C2C;
 
     --lineheight: 100%;
     
@@ -39,10 +40,28 @@
     --spaceS: 1rem;
 }
 
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+
+    :root {
+    --light:#121212;
+    --dark: #D8D8D8;
+    --lightgrey: #2C2C2C; 
+    --darkgrey: #E9E9E9;
+    }
+
+    header {
+        color: #ffffff;
+    }
+
+}
+
 body {
     font-family: var(--font-family1);
     padding: var(--spaceL);
     font-size: calc(var(--textS)*1.2);
+    background-color: var(--light);
+    color: var(--dark);
 }
 
 p {
@@ -90,7 +109,7 @@ a {
     flex-shrink: 0;  
     padding: var(--spaceS);
     border-radius: 5px;
-    background-color: var(--color3);
+    background-color: var(--lightgrey);
     font-family: var(--main-font);
     font-weight: 200;
 }
@@ -134,7 +153,7 @@ button {
 }
 
 .active {
-    background-color: var(--dark);
+    background-color: var(--darkgrey);
     color: var(--light);
     padding: calc(var(--spaceS)*0.4);
     border-radius: 5px;
@@ -164,6 +183,7 @@ section {
     mix-blend-mode: multiply;
     opacity: 95%;
     z-index: 2;
+    color: #000000;
 }
 
 #secondtext {
@@ -171,6 +191,7 @@ section {
     mix-blend-mode: multiply;
     opacity: 95%;
     z-index: 2;
+    color: #000000;
 }
 
 
@@ -279,18 +300,18 @@ couldn't figure out container queries but will come back to that */
 #share, #download {
     border-style: solid;
     border-width: 0.5px;
-    border-color: var(--dark);
+    border-color: var(--darkgrey);
     width: 100%;
     text-align: center;
 }
 
 #download:hover {
-    background-color: var(--dark);
+    background-color: var(--darkgrey);
     color: var(--light);
 }
 
 button:hover {
-    background-color: var(--dark);
+    background-color: var(--darkgrey);
     color: var(--light);
 }
 
@@ -320,7 +341,7 @@ button:hover {
 @media (width<950px) {
     .grid {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: space-between;
         gap: var(--spaceS);
     }
