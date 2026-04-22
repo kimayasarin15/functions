@@ -24,8 +24,6 @@
 
     --light: #FFFFFF;
     --dark: #121212;
-    /* --color: #FF4848;
-    --color2:#442FFF; */
     --lightgrey: #E9E9E9;
     --darkgrey: #2C2C2C;
 
@@ -53,6 +51,7 @@
     header {
         color: #ffffff;
     }
+
 
 }
 

@@ -72,26 +72,28 @@ const share = document.querySelector('#share');
 share.addEventListener('click', async() => {
     // Safari renders blank on first `toPng`, so burn the first one (from Michael)
     await toPng(document.querySelector('#posterbox'))
-        toPng(document.querySelector('#posterbox'))
-            .then(async (dataUrl) => {
+        await toPng(document.querySelector('#posterbox'))
+            await toPng(document.querySelector('#posterbox'))
+                toPng(document.querySelector('#posterbox'))
+                    .then(async (dataUrl) => {
 
-            const blob = await (await fetch(dataUrl)).blob();
-            const file = new File([blob], 'nyc-mockup.png', { type: blob.type });
-        
-            if (navigator.canShare({ files: [file], })) {
-            try {
-                await navigator.share({
-                    files: [file],
-                    title: "nyc-mockup",
-                });
-            } catch (error) {
-                console.error(error);
-            }
-            } else {
-                console.log("Cannot share file");
-            }
+                    const blob = await (await fetch(dataUrl)).blob();
+                    const file = new File([blob], 'nyc-mockup.png', { type: blob.type });
+                
+                    if (navigator.canShare({ files: [file], })) {
+                    try {
+                        await navigator.share({
+                            files: [file],
+                            title: "nyc-mockup",
+                        });
+                    } catch (error) {
+                        console.error(error);
+                    }
+                    } else {
+                        console.log("Cannot share file");
+                    }
 
-        }); 
+                }); 
 
 }); 
 
